@@ -1,0 +1,33 @@
+Build profile: -w ghc-9.4.8 -O1
+In order, the following will be built (use -v for more details):
+ - pih-0.1.0.0 (exe:vqe-demo) (first run)
+Configuring executable 'vqe-demo' for pih-0.1.0.0..
+Preprocessing executable 'vqe-demo' for pih-0.1.0.0..
+Building executable 'vqe-demo' for pih-0.1.0.0..
+[1 of 1] Compiling Main             ( app/VQEDemo.hs, /Users/jav/PycharmProjects/hamcode_vqe_code_organized/dist-newstyle/build/aarch64-osx/ghc-9.4.8/pih-0.1.0.0/x/vqe-demo/build/vqe-demo/vqe-demo-tmp/Main.o )
+[2 of 2] Linking /Users/jav/PycharmProjects/hamcode_vqe_code_organized/dist-newstyle/build/aarch64-osx/ghc-9.4.8/pih-0.1.0.0/x/vqe-demo/build/vqe-demo/vqe-demo
+ld: warning: ignoring duplicate libraries: '-lm'
+
+VQE progress: 1/8 ( 12.5%)  current q=[0]  E=1.000000000000  best q=[0]  best E=1.000000000000
+VQE progress: 2/8 ( 25.0%)  current q=[1]  E=1.414213562373  best q=[0]  best E=1.000000000000
+VQE progress: 3/8 ( 37.5%)  current q=[2]  E=1.000000000000  best q=[0]  best E=1.000000000000
+VQE progress: 4/8 ( 50.0%)  current q=[3]  E=-0.000000000000  best q=[3]  best E=-0.000000000000
+VQE progress: 5/8 ( 62.5%)  current q=[4]  E=-1.000000000000  best q=[4]  best E=-1.000000000000
+VQE progress: 6/8 ( 75.0%)  current q=[5]  E=-1.414213562373  best q=[5]  best E=-1.414213562373
+VQE progress: 7/8 ( 87.5%)  current q=[6]  E=-1.000000000000  best q=[5]  best E=-1.414213562373
+VQE progress: 8/8 (100.0%)  current q=[7]  E=-0.000000000000  best q=[5]  best E=-1.414213562373
+Discrete VQE: H = X + Z
+Ansatz: exp(-2*pi*i*(q/16)Y)|0>, q in {0,...,7}
+
+q=0  E=1.000000000000
+q=1  E=1.414213562373
+q=2  E=1.000000000000
+q=3  E=-0.000000000000
+q=4  E=-1.000000000000
+q=5  E=-1.414213562373
+q=6  E=-1.000000000000
+q=7  E=-0.000000000000
+
+best q       = [5]
+best energy  = -1.414213562373
+exact ground = -1.414213562373

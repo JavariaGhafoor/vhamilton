@@ -1,0 +1,44 @@
+Build profile: -w ghc-9.4.8 -O1
+In order, the following will be built (use -v for more details):
+ - pih-0.1.0.0 (test:regression) (first run)
+Configuring test suite 'regression' for pih-0.1.0.0..
+Preprocessing test suite 'regression' for pih-0.1.0.0..
+Building test suite 'regression' for pih-0.1.0.0..
+[1 of 1] Compiling Main             ( test/Regression.hs, /Users/jav/PycharmProjects/hamcode_vqe_code_organized/dist-newstyle/build/aarch64-osx/ghc-9.4.8/pih-0.1.0.0/t/regression/build/regression/regression-tmp/Main.o )
+[2 of 2] Linking /Users/jav/PycharmProjects/hamcode_vqe_code_organized/dist-newstyle/build/aarch64-osx/ghc-9.4.8/pih-0.1.0.0/t/regression/build/regression/regression
+ld: warning: ignoring duplicate libraries: '-lm'
+Running 1 test suites...
+Test suite regression: RUNNING...
+Hamilton compiler/VQE regression tests
+
+PASS  compiled X/8  (phase-aligned Frobenius=4.154e-16)
+PASS  compiled Y/8  (phase-aligned Frobenius=4.154e-16)
+PASS  compiled Z/8  (phase-aligned Frobenius=1.570e-16)
+PASS  compiled XI/8  (phase-aligned Frobenius=5.875e-16)
+PASS  compiled IX/8  (phase-aligned Frobenius=5.875e-16)
+PASS  compiled XY/8  (phase-aligned Frobenius=1.123e-15)
+PASS  compiled YX/8  (phase-aligned Frobenius=1.123e-15)
+PASS  compiled ZZ/8  (phase-aligned Frobenius=2.220e-16)
+PASS  label XI  (Hamiltonian Frobenius=5.579e-17)
+PASS  label IX  (Hamiltonian Frobenius=5.579e-17)
+PASS  label XY  (Hamiltonian Frobenius=1.110e-16)
+PASS  label YX  (Hamiltonian Frobenius=1.110e-16)
+PASS  label ZZ  (Hamiltonian Frobenius=0.000e0)
+
+VQE progress: 1/8 ( 12.5%)  current q=[0]  E=1.000000000000  best q=[0]  best E=1.000000000000
+VQE progress: 2/8 ( 25.0%)  current q=[1]  E=1.414213562373  best q=[0]  best E=1.000000000000
+VQE progress: 3/8 ( 37.5%)  current q=[2]  E=1.000000000000  best q=[0]  best E=1.000000000000
+VQE progress: 4/8 ( 50.0%)  current q=[3]  E=-0.000000000000  best q=[3]  best E=-0.000000000000
+VQE progress: 5/8 ( 62.5%)  current q=[4]  E=-1.000000000000  best q=[4]  best E=-1.000000000000
+VQE progress: 6/8 ( 75.0%)  current q=[5]  E=-1.414213562373  best q=[5]  best E=-1.414213562373
+VQE progress: 7/8 ( 87.5%)  current q=[6]  E=-1.000000000000  best q=[5]  best E=-1.414213562373
+VQE progress: 8/8 (100.0%)  current q=[7]  E=-0.000000000000  best q=[5]  best E=-1.414213562373
+PASS  VQE best q
+PASS  VQE best energy
+PASS  VQE exact ground
+
+All regression tests passed.
+Test suite regression: PASS
+Test suite logged to:
+/Users/jav/PycharmProjects/hamcode_vqe_code_organized/dist-newstyle/build/aarch64-osx/ghc-9.4.8/pih-0.1.0.0/t/regression/test/pih-0.1.0.0-regression.log
+1 of 1 test suites (1 of 1 test cases) passed.

@@ -1,0 +1,157 @@
+Discrete chemistry VQE: DMANH+ upper 4x4 block
+
+Hamiltonian dyadic precision k = 14
+parameter dyadic precision r   = 7
+Trotter refinement n           = 0
+search mode                    = analytic dyadic coordinate minimization (trigonometric fit + coarse beam seed)
+target-grid candidates         = 262144
+coarse precision r0            = 3
+beam width                     = 3
+G1 fit samples                 = 3 energy values
+G2/G3 fit samples              = 5 energy values each
+max analytic coordinate sweeps = 12
+precision traversal            = direct r0 -> target r
+
+Ansatz generators:
+  G1 = YI
+  G2 = (IY + ZY)/2 = |0><0| x Y
+  G3 = (IY - ZY)/2 = |1><1| x Y
+  alpha_j = q_j / 2^r
+
+Coarse search at r=3
+r=3: 1/64 (  1.6%)  current q=[0,0,0]  E=0.723999023437  best q=[0,0,0]  best E=0.723999023437r=3: 2/64 (  3.1%)  current q=[0,0,1]  E=0.723999023437  best q=[0,0,0]  best E=0.723999023437r=3: 3/64 (  4.7%)  current q=[0,0,2]  E=0.723999023437  best q=[0,0,0]  best E=0.723999023437r=3: 4/64 (  6.2%)  current q=[0,0,3]  E=0.723999023437  best q=[0,0,0]  best E=0.723999023437r=3: 5/64 (  7.8%)  current q=[0,1,0]  E=0.286132812500  best q=[0,1,0]  best E=0.286132812500r=3: 6/64 (  9.4%)  current q=[0,1,1]  E=0.286132812500  best q=[0,1,1]  best E=0.286132812500r=3: 7/64 ( 10.9%)  current q=[0,1,2]  E=0.286132812500  best q=[0,1,2]  best E=0.286132812500r=3: 8/64 ( 12.5%)  current q=[0,1,3]  E=0.286132812500  best q=[0,1,2]  best E=0.286132812500r=3: 9/64 ( 14.1%)  current q=[0,2,0]  E=0.137939453125  best q=[0,2,0]  best E=0.137939453125r=3: 10/64 ( 15.6%)  current q=[0,2,1]  E=0.137939453125  best q=[0,2,0]  best E=0.137939453125r=3: 11/64 ( 17.2%)  current q=[0,2,2]  E=0.137939453125  best q=[0,2,0]  best E=0.137939453125r=3: 12/64 ( 18.8%)  current q=[0,2,3]  E=0.137939453125  best q=[0,2,3]  best E=0.137939453125r=3: 13/64 ( 20.3%)  current q=[0,3,0]  E=0.575805664062  best q=[0,2,3]  best E=0.137939453125r=3: 14/64 ( 21.9%)  current q=[0,3,1]  E=0.575805664062  best q=[0,2,3]  best E=0.137939453125r=3: 15/64 ( 23.4%)  current q=[0,3,2]  E=0.575805664062  best q=[0,2,3]  best E=0.137939453125r=3: 16/64 ( 25.0%)  current q=[0,3,3]  E=0.575805664062  best q=[0,2,3]  best E=0.137939453125r=3: 17/64 ( 26.6%)  current q=[1,0,0]  E=0.378417968750  best q=[0,2,3]  best E=0.137939453125r=3: 18/64 ( 28.1%)  current q=[1,0,1]  E=0.270862190707  best q=[0,2,3]  best E=0.137939453125r=3: 19/64 ( 29.7%)  current q=[1,0,2]  E=0.290344238281  best q=[0,2,3]  best E=0.137939453125r=3: 20/64 ( 31.2%)  current q=[1,0,3]  E=0.384106071011  best q=[0,2,3]  best E=0.137939453125r=3: 21/64 ( 32.8%)  current q=[1,1,0]  E=0.050138280423  best q=[1,1,0]  best E=0.050138280423r=3: 22/64 ( 34.4%)  current q=[1,1,1]  E=-0.017333984375  best q=[1,1,1]  best E=-0.017333984375r=3: 23/64 ( 35.9%)  current q=[1,1,2]  E=0.082804943252  best q=[1,1,1]  best E=-0.017333984375r=3: 24/64 ( 37.5%)  current q=[1,1,3]  E=0.250549316406  best q=[1,1,1]  best E=-0.017333984375r=3: 25/64 ( 39.1%)  current q=[1,2,0]  E=-0.077331542969  best q=[1,2,0]  best E=-0.077331542969r=3: 26/64 ( 40.6%)  current q=[1,2,1]  E=-0.125834006095  best q=[1,2,1]  best E=-0.125834006095r=3: 27/64 ( 42.2%)  current q=[1,2,2]  E=0.013427734375  best q=[1,2,1]  best E=-0.125834006095r=3: 28/64 ( 43.8%)  current q=[1,2,3]  E=0.217530318379  best q=[1,2,1]  best E=-0.125834006095r=3: 29/64 ( 45.3%)  current q=[1,3,0]  E=0.175467121665  best q=[1,2,1]  best E=-0.125834006095r=3: 30/64 ( 46.9%)  current q=[1,3,1]  E=0.113708496094  best q=[1,2,1]  best E=-0.125834006095r=3: 31/64 ( 48.4%)  current q=[1,3,2]  E=0.227641369033  best q=[1,2,1]  best E=-0.125834006095r=3: 32/64 ( 50.0%)  current q=[1,3,3]  E=0.409179687500  best q=[1,2,1]  best E=-0.125834006095r=3: 33/64 ( 51.6%)  current q=[2,0,0]  E=0.005249023437  best q=[1,2,1]  best E=-0.125834006095r=3: 34/64 ( 53.1%)  current q=[2,0,1]  E=-0.201782226562  best q=[2,0,1]  best E=-0.201782226562r=3: 35/64 ( 54.7%)  current q=[2,0,2]  E=-0.143310546875  best q=[2,0,1]  best E=-0.201782226562r=3: 36/64 ( 56.2%)  current q=[2,0,3]  E=0.063720703125  best q=[2,0,1]  best E=-0.201782226562r=3: 37/64 ( 57.8%)  current q=[2,1,0]  E=0.005249023437  best q=[2,0,1]  best E=-0.201782226562r=3: 38/64 ( 59.4%)  current q=[2,1,1]  E=-0.201782226562  best q=[2,0,1]  best E=-0.201782226562r=3: 39/64 ( 60.9%)  current q=[2,1,2]  E=-0.143310546875  best q=[2,0,1]  best E=-0.201782226562r=3: 40/64 ( 62.5%)  current q=[2,1,3]  E=0.063720703125  best q=[2,0,1]  best E=-0.201782226562r=3: 41/64 ( 64.1%)  current q=[2,2,0]  E=0.005249023437  best q=[2,0,1]  best E=-0.201782226562r=3: 42/64 ( 65.6%)  current q=[2,2,1]  E=-0.201782226562  best q=[2,0,1]  best E=-0.201782226562r=3: 43/64 ( 67.2%)  current q=[2,2,2]  E=-0.143310546875  best q=[2,0,1]  best E=-0.201782226562r=3: 44/64 ( 68.8%)  current q=[2,2,3]  E=0.063720703125  best q=[2,0,1]  best E=-0.201782226562r=3: 45/64 ( 70.3%)  current q=[2,3,0]  E=0.005249023437  best q=[2,0,1]  best E=-0.201782226562r=3: 46/64 ( 71.9%)  current q=[2,3,1]  E=-0.201782226562  best q=[2,0,1]  best E=-0.201782226562r=3: 47/64 ( 73.4%)  current q=[2,3,2]  E=-0.143310546875  best q=[2,0,1]  best E=-0.201782226562r=3: 48/64 ( 75.0%)  current q=[2,3,3]  E=0.063720703125  best q=[2,0,1]  best E=-0.201782226562r=3: 49/64 ( 76.6%)  current q=[3,0,0]  E=0.350830078125  best q=[2,0,1]  best E=-0.201782226562r=3: 50/64 ( 78.1%)  current q=[3,0,1]  E=0.251354606168  best q=[2,0,1]  best E=-0.201782226562r=3: 51/64 ( 79.7%)  current q=[3,0,2]  E=0.290344238281  best q=[2,0,1]  best E=-0.201782226562r=3: 52/64 ( 81.2%)  current q=[3,0,3]  E=0.403613655551  best q=[2,0,1]  best E=-0.201782226562r=3: 53/64 ( 82.8%)  current q=[3,1,0]  E=0.241243555514  best q=[2,0,1]  best E=-0.201782226562r=3: 54/64 ( 84.4%)  current q=[3,1,1]  E=0.101684570312  best q=[2,0,1]  best E=-0.201782226562r=3: 55/64 ( 85.9%)  current q=[3,1,2]  E=0.060017322373  best q=[2,0,1]  best E=-0.201782226562r=3: 56/64 ( 87.5%)  current q=[3,1,3]  E=0.099304199219  best q=[2,0,1]  best E=-0.201782226562r=3: 57/64 ( 89.1%)  current q=[3,2,0]  E=0.220520019531  best q=[2,0,1]  best E=-0.201782226562r=3: 58/64 ( 90.6%)  current q=[3,2,1]  E=0.061991232658  best q=[2,0,1]  best E=-0.201782226562r=3: 59/64 ( 92.2%)  current q=[3,2,2]  E=-0.018798828125  best q=[2,0,1]  best E=-0.201782226562r=3: 60/64 ( 93.8%)  current q=[3,2,3]  E=-0.015870162129  best q=[2,0,1]  best E=-0.201782226562r=3: 61/64 ( 95.3%)  current q=[3,3,0]  E=0.405587565835  best q=[2,0,1]  best E=-0.201782226562r=3: 62/64 ( 96.9%)  current q=[3,3,1]  E=0.260314941406  best q=[2,0,1]  best E=-0.201782226562r=3: 63/64 ( 98.4%)  current q=[3,3,2]  E=0.204853748155  best q=[2,0,1]  best E=-0.201782226562r=3: 64/64 (100.0%)  current q=[3,3,3]  E=0.230346679687  best q=[2,0,1]  best E=-0.201782226562
+  retained coarse beam: [[2,0,1],[2,1,1],[2,3,1]]
+  coarse best:          q=[2,0,1]  E=-0.201782226562
+  direct lift to r=7
+  lifted beam:          [[32,0,16],[32,16,16],[32,48,16]]
+  lifted points reuse their coarse energies (0 new evaluations)
+
+Analytic coordinate sweep 1
+  beam starts = [[32,0,16],[32,16,16],[32,48,16]]
+  seed 1 start q=[32,0,16]
+analytic sweep 1 seed 1 q1 fit: 1/2 ( 50.0%)  current q=[0,0,16]  E=0.723999023437  best q=[0,0,16]  best E=0.723999023437analytic sweep 1 seed 1 q1 fit: 2/2 (100.0%)  current q=[16,0,16]  E=0.270862190707  best q=[16,0,16]  best E=0.270862190707
+    q1 analytic jump: 32 -> 32  E=-0.201782226562  model residual=+0.000e0
+analytic sweep 1 seed 1 q2 fit: 1/2 ( 50.0%)  current q=[32,32,16]  E=-0.201782226562  best q=[32,32,16]  best E=-0.201782226562analytic sweep 1 seed 1 q2 fit: 2/2 (100.0%)  current q=[32,56,16]  E=-0.201782226562  best q=[32,32,16]  best E=-0.201782226562
+analytic sweep 1 seed 1 q2 jump: 1/1 (100.0%)  current q=[32,2,16]  E=-0.201782226562  best q=[32,2,16]  best E=-0.201782226562
+    q2 analytic jump: 0 -> 2  E=-0.201782226562  model residual=+8.327e-17
+analytic sweep 1 seed 1 q3 fit: 1/4 ( 25.0%)  current q=[32,2,0]  E=0.005249023437  best q=[32,2,0]  best E=0.005249023437analytic sweep 1 seed 1 q3 fit: 2/4 ( 50.0%)  current q=[32,2,32]  E=-0.143310546875  best q=[32,2,32]  best E=-0.143310546875analytic sweep 1 seed 1 q3 fit: 3/4 ( 75.0%)  current q=[32,2,48]  E=0.063720703125  best q=[32,2,32]  best E=-0.143310546875analytic sweep 1 seed 1 q3 fit: 4/4 (100.0%)  current q=[32,2,56]  E=0.077362439074  best q=[32,2,32]  best E=-0.143310546875
+analytic sweep 1 seed 1 q3 jump: 1/1 (100.0%)  current q=[32,2,21]  E=-0.221122349773  best q=[32,2,21]  best E=-0.221122349773
+    q3 analytic jump: 16 -> 21  E=-0.221122349773  model residual=+5.551e-17
+  seed 1 end   q=[32,2,21]  E=-0.221122349773
+  seed 2 start q=[32,16,16]
+analytic sweep 1 seed 2 q1 fit: 1/2 ( 50.0%)  current q=[0,16,16]  E=0.286132812500  best q=[0,16,16]  best E=0.286132812500analytic sweep 1 seed 2 q1 fit: 2/2 (100.0%)  current q=[16,16,16]  E=-0.017333984375  best q=[16,16,16]  best E=-0.017333984375
+analytic sweep 1 seed 2 q1 jump: 1/1 (100.0%)  current q=[30,16,16]  E=-0.208704335311  best q=[30,16,16]  best E=-0.208704335311
+    q1 analytic jump: 32 -> 30  E=-0.208704335311  model residual=+5.551e-17
+analytic sweep 1 seed 2 q2 fit: 1/4 ( 25.0%)  current q=[30,0,16]  E=-0.190985042524  best q=[30,0,16]  best E=-0.190985042524analytic sweep 1 seed 2 q2 fit: 2/4 ( 50.0%)  current q=[30,32,16]  E=-0.216839841310  best q=[30,32,16]  best E=-0.216839841310analytic sweep 1 seed 2 q2 fit: 3/4 ( 75.0%)  current q=[30,48,16]  E=-0.208612409235  best q=[30,32,16]  best E=-0.216839841310analytic sweep 1 seed 2 q2 fit: 4/4 (100.0%)  current q=[30,56,16]  E=-0.201497878284  best q=[30,32,16]  best E=-0.216839841310
+analytic sweep 1 seed 2 q2 jump: 1/1 (100.0%)  current q=[30,31,16]  E=-0.216847237163  best q=[30,31,16]  best E=-0.216847237163
+    q2 analytic jump: 16 -> 31  E=-0.216847237163  model residual=+2.776e-17
+analytic sweep 1 seed 2 q3 fit: 1/4 ( 25.0%)  current q=[30,31,0]  E=-0.022485943643  best q=[30,31,0]  best E=-0.022485943643analytic sweep 1 seed 2 q3 fit: 2/4 ( 50.0%)  current q=[30,31,32]  E=-0.137591552504  best q=[30,31,32]  best E=-0.137591552504analytic sweep 1 seed 2 q3 fit: 3/4 ( 75.0%)  current q=[30,31,48]  E=0.086957209166  best q=[30,31,32]  best E=-0.137591552504analytic sweep 1 seed 2 q3 fit: 4/4 (100.0%)  current q=[30,31,56]  E=0.105711173943  best q=[30,31,32]  best E=-0.137591552504
+analytic sweep 1 seed 2 q3 jump: 1/1 (100.0%)  current q=[30,31,20]  E=-0.230223868644  best q=[30,31,20]  best E=-0.230223868644
+    q3 analytic jump: 16 -> 20  E=-0.230223868644  model residual=+2.220e-16
+  seed 2 end   q=[30,31,20]  E=-0.230223868644
+  seed 3 start q=[32,48,16]
+analytic sweep 1 seed 3 q1 fit: 1/2 ( 50.0%)  current q=[0,48,16]  E=0.575805664062  best q=[0,48,16]  best E=0.575805664062analytic sweep 1 seed 3 q1 fit: 2/2 (100.0%)  current q=[16,48,16]  E=0.113708496094  best q=[16,48,16]  best E=0.113708496094
+    q1 analytic jump: 32 -> 30  E=-0.208612409235  model residual=+0.000e0
+    q2 analytic jump: 48 -> 31  E=-0.216847237163  model residual=+2.776e-17
+    q3 analytic jump: 16 -> 20  E=-0.230223868644  model residual=+2.220e-16
+  seed 3 end   q=[30,31,20]  E=-0.230223868644
+  retained beam = [[30,31,20],[32,2,21],[32,0,16]]
+  sweep evaluations = 25
+  sweep best = q=[30,31,20]  E=-0.230223868644
+
+Analytic coordinate sweep 2
+  beam starts = [[30,31,20],[32,2,21],[32,0,16]]
+  seed 1 start q=[30,31,20]
+analytic sweep 2 seed 1 q1 fit: 1/3 ( 33.3%)  current q=[0,31,20]  E=0.125154019363  best q=[0,31,20]  best E=0.125154019363analytic sweep 2 seed 1 q1 fit: 2/3 ( 66.7%)  current q=[16,31,20]  E=-0.116355845973  best q=[16,31,20]  best E=-0.116355845973analytic sweep 2 seed 1 q1 fit: 3/3 (100.0%)  current q=[32,31,20]  E=-0.220102766138  best q=[32,31,20]  best E=-0.220102766138
+analytic sweep 2 seed 1 q1 jump: 1/1 (100.0%)  current q=[28,31,20]  E=-0.233322010535  best q=[28,31,20]  best E=-0.233322010535
+    q1 analytic jump: 30 -> 28  E=-0.233322010535  model residual=+1.665e-16
+analytic sweep 2 seed 1 q2 fit: 1/5 ( 20.0%)  current q=[28,0,20]  E=-0.181237334793  best q=[28,0,20]  best E=-0.181237334793analytic sweep 2 seed 1 q2 fit: 2/5 ( 40.0%)  current q=[28,16,20]  E=-0.217525138835  best q=[28,16,20]  best E=-0.217525138835analytic sweep 2 seed 1 q2 fit: 3/5 ( 60.0%)  current q=[28,32,20]  E=-0.233011257905  best q=[28,32,20]  best E=-0.233011257905analytic sweep 2 seed 1 q2 fit: 4/5 ( 80.0%)  current q=[28,48,20]  E=-0.210647581638  best q=[28,32,20]  best E=-0.233011257905analytic sweep 2 seed 1 q2 fit: 5/5 (100.0%)  current q=[28,56,20]  E=-0.196402890317  best q=[28,32,20]  best E=-0.233011257905
+analytic sweep 2 seed 1 q2 jump: 1/1 (100.0%)  current q=[28,30,20]  E=-0.233457166330  best q=[28,30,20]  best E=-0.233457166330
+    q2 analytic jump: 31 -> 30  E=-0.233457166330  model residual=+1.110e-16
+analytic sweep 2 seed 1 q3 fit: 1/5 ( 20.0%)  current q=[28,30,0]  E=-0.046761482559  best q=[28,30,0]  best E=-0.046761482559analytic sweep 2 seed 1 q3 fit: 2/5 ( 40.0%)  current q=[28,30,16]  E=-0.225113367592  best q=[28,30,16]  best E=-0.225113367592analytic sweep 2 seed 1 q3 fit: 3/5 ( 60.0%)  current q=[28,30,32]  E=-0.127330652133  best q=[28,30,16]  best E=-0.225113367592analytic sweep 2 seed 1 q3 fit: 4/5 ( 80.0%)  current q=[28,30,48]  E=0.109762688467  best q=[28,30,16]  best E=-0.225113367592analytic sweep 2 seed 1 q3 fit: 5/5 (100.0%)  current q=[28,30,56]  E=0.133076903473  best q=[28,30,16]  best E=-0.225113367592
+analytic sweep 2 seed 1 q3 jump: 1/1 (100.0%)  current q=[28,30,19]  E=-0.233505526840  best q=[28,30,19]  best E=-0.233505526840
+    q3 analytic jump: 20 -> 19  E=-0.233505526840  model residual=+1.110e-16
+  seed 1 end   q=[28,30,19]  E=-0.233505526840
+  seed 2 start q=[32,2,21]
+analytic sweep 2 seed 2 q1 fit: 1/2 ( 50.0%)  current q=[0,2,21]  E=0.690112353337  best q=[0,2,21]  best E=0.690112353337analytic sweep 2 seed 2 q1 fit: 2/2 (100.0%)  current q=[16,2,21]  E=0.235402535572  best q=[16,2,21]  best E=0.235402535572
+    q1 analytic jump: 32 -> 32  E=-0.221122349773  model residual=+0.000e0
+analytic sweep 2 seed 2 q2 fit: 1/5 ( 20.0%)  current q=[32,0,21]  E=-0.221122349773  best q=[32,0,21]  best E=-0.221122349773analytic sweep 2 seed 2 q2 fit: 2/5 ( 40.0%)  current q=[32,16,21]  E=-0.221122349773  best q=[32,0,21]  best E=-0.221122349773analytic sweep 2 seed 2 q2 fit: 3/5 ( 60.0%)  current q=[32,32,21]  E=-0.221122349773  best q=[32,0,21]  best E=-0.221122349773analytic sweep 2 seed 2 q2 fit: 4/5 ( 80.0%)  current q=[32,48,21]  E=-0.221122349773  best q=[32,0,21]  best E=-0.221122349773analytic sweep 2 seed 2 q2 fit: 5/5 (100.0%)  current q=[32,56,21]  E=-0.221122349773  best q=[32,0,21]  best E=-0.221122349773
+analytic sweep 2 seed 2 q2 jump: 1/1 (100.0%)  current q=[32,63,21]  E=-0.221122349773  best q=[32,63,21]  best E=-0.221122349773
+    q2 analytic jump: 2 -> 63  E=-0.221122349773  model residual=+2.220e-16
+analytic sweep 2 seed 2 q3 fit: 1/5 ( 20.0%)  current q=[32,63,0]  E=0.005249023437  best q=[32,63,0]  best E=0.005249023437analytic sweep 2 seed 2 q3 fit: 2/5 ( 40.0%)  current q=[32,63,16]  E=-0.201782226562  best q=[32,63,16]  best E=-0.201782226562analytic sweep 2 seed 2 q3 fit: 3/5 ( 60.0%)  current q=[32,63,32]  E=-0.143310546875  best q=[32,63,16]  best E=-0.201782226562analytic sweep 2 seed 2 q3 fit: 4/5 ( 80.0%)  current q=[32,63,48]  E=0.063720703125  best q=[32,63,16]  best E=-0.201782226562analytic sweep 2 seed 2 q3 fit: 5/5 (100.0%)  current q=[32,63,56]  E=0.077362439074  best q=[32,63,16]  best E=-0.201782226562
+    q3 analytic jump: 21 -> 21  E=-0.221122349773  model residual=+8.327e-17
+  seed 2 end   q=[32,63,21]  E=-0.221122349773
+  seed 3 start q=[32,0,16]
+    q1 analytic jump: 32 -> 32  E=-0.201782226562  model residual=+0.000e0
+    q2 analytic jump: 0 -> 2  E=-0.201782226562  model residual=+8.327e-17
+    q3 analytic jump: 16 -> 21  E=-0.221122349773  model residual=+5.551e-17
+  seed 3 end   q=[32,2,21]  E=-0.221122349773
+  retained beam = [[28,30,19],[30,31,20],[32,63,21]]
+  sweep evaluations = 29
+  sweep best = q=[28,30,19]  E=-0.233505526840
+
+Analytic coordinate sweep 3
+  beam starts = [[28,30,19],[30,31,20],[32,63,21]]
+  seed 1 start q=[28,30,19]
+analytic sweep 3 seed 1 q1 fit: 1/3 ( 33.3%)  current q=[0,30,19]  E=0.115313753335  best q=[0,30,19]  best E=0.115313753335analytic sweep 3 seed 1 q1 fit: 2/3 ( 66.7%)  current q=[16,30,19]  E=-0.125759659784  best q=[16,30,19]  best E=-0.125759659784analytic sweep 3 seed 1 q1 fit: 3/3 (100.0%)  current q=[32,30,19]  E=-0.217628276516  best q=[32,30,19]  best E=-0.217628276516
+    q1 analytic jump: 28 -> 28  E=-0.233505526840  model residual=+2.776e-17
+analytic sweep 3 seed 1 q2 fit: 1/5 ( 20.0%)  current q=[28,0,19]  E=-0.178645194920  best q=[28,0,19]  best E=-0.178645194920analytic sweep 3 seed 1 q2 fit: 2/5 ( 40.0%)  current q=[28,16,19]  E=-0.216735433960  best q=[28,16,19]  best E=-0.216735433960analytic sweep 3 seed 1 q2 fit: 3/5 ( 60.0%)  current q=[28,32,19]  E=-0.233092233136  best q=[28,32,19]  best E=-0.233092233136analytic sweep 3 seed 1 q2 fit: 4/5 ( 80.0%)  current q=[28,48,19]  E=-0.210157449487  best q=[28,32,19]  best E=-0.233092233136analytic sweep 3 seed 1 q2 fit: 5/5 (100.0%)  current q=[28,56,19]  E=-0.195160178731  best q=[28,32,19]  best E=-0.233092233136
+    q2 analytic jump: 30 -> 30  E=-0.233505526840  model residual=+5.551e-17
+    q3 analytic jump: 19 -> 19  E=-0.233505526840  model residual=+1.110e-16
+  seed 1 end   q=[28,30,19]  E=-0.233505526840
+  seed 2 start q=[30,31,20]
+    q1 analytic jump: 30 -> 28  E=-0.233322010535  model residual=+1.665e-16
+    q2 analytic jump: 31 -> 30  E=-0.233457166330  model residual=+1.110e-16
+    q3 analytic jump: 20 -> 19  E=-0.233505526840  model residual=+1.110e-16
+  seed 2 end   q=[28,30,19]  E=-0.233505526840
+  seed 3 start q=[32,63,21]
+analytic sweep 3 seed 3 q1 fit: 1/2 ( 50.0%)  current q=[0,63,21]  E=0.736784457199  best q=[0,63,21]  best E=0.736784457199analytic sweep 3 seed 3 q1 fit: 2/2 (100.0%)  current q=[16,63,21]  E=0.247669470364  best q=[16,63,21]  best E=0.247669470364
+    q1 analytic jump: 32 -> 32  E=-0.221122349773  model residual=+0.000e0
+    q2 analytic jump: 63 -> 63  E=-0.221122349773  model residual=+2.220e-16
+    q3 analytic jump: 21 -> 21  E=-0.221122349773  model residual=+8.327e-17
+  seed 3 end   q=[32,63,21]  E=-0.221122349773
+  retained beam = [[28,30,19],[30,31,20],[32,63,21]]
+  sweep evaluations = 10
+  sweep best = q=[28,30,19]  E=-0.233505526840
+  beam unchanged; analytic coordinate search converged
+
+Best discrete VQE result
+  best q                     = [28,30,19]
+  full VQE energy (scaled)   = -0.233505526840
+  exact ground of dyadic H_k (scaled) = -0.233686212894
+  nonidentity VQE component  = -0.414474765121
+  nonidentity ground comp.   = -0.414655451175
+  variational gap (scaled)   = 1.806860544808e-4
+
+Search cost
+  energy evaluations used    = 128
+  exhaustive target grid     = 262144
+  evaluation reduction       = 2048.0x
+
+Identity/physical-energy reconstruction
+  scale                      = 0.019212480427
+  exact identity coeff (mH) = 9.418625000000
+  scaled identity (exact)    = 0.180955148464
+  scaled identity (dyadic)   = 0.180969238281
+
+Physical energies (milliHartree)
+  VQE estimate               = -12.153845919242
+  exact ground of dyadic H_k = -12.163250538035
+  exact ground of physical H = -12.162810425974
+  variational gap            = 0.009404618793
+  H discretization shift     = -0.000440112060
+  total signed VQE error     = +0.008964506732
+
+Notes:
+  * The VQE target includes the dyadic identity term; ansatz circuits do not need it.
+  * Refine, coordinate, analytic, and analytic-direct modes all return parameters on the requested dyadic grid.
+  * Coordinate mode tests axial +/-1 moves first, reducing the local 3^p factor to roughly 2p per round.
+  * Analytic mode fits the exact low-degree one-coordinate trigonometric energy curves for this ansatz and jumps directly to target r.
+  * Analytic mode has energy-query complexity approximately O(2^(p*r0) + B*p*L).
+  * Analytic-direct removes the coarse search by using q_j=2^(r-3), the deterministic beta_j=pi/4 balanced seed.
+  * For fixed harmonic degree its energy-query complexity is approximately O(p*L), independent of target precision r.
+  * The balanced-start construction is polynomial; global convergence of the nonconvex VQE search is still heuristic.
+  * All non-exhaustive search modes remain heuristic as global multi-parameter optimizers.
+  * Use 'exhaustive' mode at feasible r to validate the refinement result.
+  * G2 and G3 contain commuting Pauli terms, so n=0 has no Trotter error here.
+  * This run is exact-statevector/noiseless; there is no shot noise yet.

@@ -1,0 +1,5 @@
+r=3  grid=16  best q=[1,2]  best E=-0.000000000000  exact ground=-1.000000000000  -> qaoa_grid_r3.csv
+r=4  grid=64  best q=[2,3]  best E=-1.000000000000  exact ground=-1.000000000000  -> qaoa_grid_r4.csv
+r=5  grid=256  best q=[4,6]  best E=-1.000000000000  exact ground=-1.000000000000  -> qaoa_grid_r5.csv
+
+[exited with code 0]

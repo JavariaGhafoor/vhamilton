@@ -1,0 +1,1 @@
+/Users/jav/PycharmProjects/hamcode_vqe_code_organized/.venv/bin/python -m scripts.experiments.chem_vqe_sweep --k-min 3 --k-max 12 --r-min 2 --r-max 6 --target-error-mh 0.1 --output-dir /Users/jav/PycharmProjects/hamcode_vqe_code_organized/results/hamilton_vqe/07_exhaustive_k_r_sweep

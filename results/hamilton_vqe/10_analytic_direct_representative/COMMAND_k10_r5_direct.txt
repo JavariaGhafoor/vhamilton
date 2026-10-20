@@ -1,0 +1,1 @@
+cabal run chem-vqe -- 10 5 0 direct

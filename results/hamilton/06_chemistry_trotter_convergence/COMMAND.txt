@@ -1,0 +1,1 @@
+cabal run gen-tables -- /Users/jav/PycharmProjects/hamcode_vqe_code_organized/results/hamilton/06_chemistry_trotter_convergence chem-trotter

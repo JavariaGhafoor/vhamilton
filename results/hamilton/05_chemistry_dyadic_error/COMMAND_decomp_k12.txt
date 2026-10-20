@@ -1,0 +1,1 @@
+/Users/jav/PycharmProjects/hamcode_vqe_code_organized/.venv/bin/python -m scripts.chemistry.chem_decompose --block upper --level 12

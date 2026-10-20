@@ -1,0 +1,45 @@
+scale = 0.019212480427
+cond(V_G1)  = 2.414213562373
+cond(V_G23) = 28.298983221171
+
+Validation matrix: analytic-direct vs exhaustive reference
+k = 3..12, r = 4..6
+
+k= 3 r=4: direct=(3, 4, 1) ref=(3, 4, 1) match=True  Q=20 L=2
+k= 3 r=5: direct=(6, 7, 3) ref=(6, 7, 3) match=True  Q=30 L=3
+k= 3 r=6: direct=(12, 15, 6) ref=(11, 15, 5) match=False Q=37 L=3
+k= 4 r=4: direct=(4, 0, 3) ref=(3, 4, 2) match=False Q=18 L=2
+k= 4 r=5: direct=(7, 7, 5) ref=(7, 7, 5) match=True  Q=22 L=2
+k= 4 r=6: direct=(14, 15, 10) ref=(14, 15, 10) match=True  Q=28 L=3
+k= 5 r=4: direct=(4, 0, 3) ref=(4, 0, 3) match=True  Q=18 L=2
+k= 5 r=5: direct=(7, 7, 5) ref=(7, 7, 5) match=True  Q=22 L=2
+k= 5 r=6: direct=(14, 15, 11) ref=(14, 15, 11) match=True  Q=28 L=3
+k= 6 r=4: direct=(4, 0, 3) ref=(3, 4, 2) match=False Q=18 L=2
+k= 6 r=5: direct=(7, 8, 5) ref=(7, 8, 5) match=True  Q=20 L=2
+k= 6 r=6: direct=(14, 15, 10) ref=(14, 15, 10) match=True  Q=30 L=3
+k= 7 r=4: direct=(4, 0, 3) ref=(3, 4, 2) match=False Q=18 L=2
+k= 7 r=5: direct=(7, 7, 5) ref=(7, 7, 5) match=True  Q=29 L=3
+k= 7 r=6: direct=(14, 15, 10) ref=(14, 15, 10) match=True  Q=30 L=3
+k= 8 r=4: direct=(4, 0, 3) ref=(3, 4, 2) match=False Q=18 L=2
+k= 8 r=5: direct=(7, 7, 5) ref=(7, 7, 5) match=True  Q=29 L=3
+k= 8 r=6: direct=(14, 15, 10) ref=(14, 15, 10) match=True  Q=30 L=3
+k= 9 r=4: direct=(4, 0, 3) ref=(3, 4, 2) match=False Q=18 L=2
+k= 9 r=5: direct=(7, 7, 5) ref=(7, 7, 5) match=True  Q=29 L=3
+k= 9 r=6: direct=(14, 15, 10) ref=(14, 15, 10) match=True  Q=30 L=3
+k=10 r=4: direct=(4, 0, 3) ref=(3, 4, 2) match=False Q=18 L=2
+k=10 r=5: direct=(7, 7, 5) ref=(7, 7, 5) match=True  Q=29 L=3
+k=10 r=6: direct=(14, 15, 10) ref=(14, 15, 10) match=True  Q=30 L=3
+k=11 r=4: direct=(4, 0, 3) ref=(3, 4, 2) match=False Q=18 L=2
+k=11 r=5: direct=(7, 7, 5) ref=(7, 7, 5) match=True  Q=29 L=3
+k=11 r=6: direct=(14, 15, 10) ref=(14, 15, 10) match=True  Q=30 L=3
+k=12 r=4: direct=(4, 0, 3) ref=(3, 4, 2) match=False Q=18 L=2
+k=12 r=5: direct=(7, 7, 5) ref=(7, 7, 5) match=True  Q=29 L=3
+k=12 r=6: direct=(14, 15, 10) ref=(14, 15, 10) match=True  Q=30 L=3
+
+Exact global recovery by r:
+  r=4: 2/10
+  r=5: 10/10
+  r=6: 9/10
+  overall: 21/30
+
+Wrote /Users/jav/PycharmProjects/hamcode_vqe_code_organized/results/hamilton_vqe/11_analytic_direct_global_validation/direct_validation_matrix.csv

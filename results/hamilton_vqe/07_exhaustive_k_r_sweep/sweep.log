@@ -1,0 +1,46 @@
+DMANH+ upper block discrete-VQE sweep
+k = 3..12, r = 2..6
+scale = 0.019212480427, exact physical ground = -12.162810425974 mH
+
+r=2: 8 candidate states
+r=3: 64 candidate states
+r=4: 512 candidate states
+r=5: 4,096 candidate states
+r=6: 32,768 candidate states
+
+Lowest absolute physical-energy error in the sweep
+  k,r                  = (10, 5)
+  best q               = [7,7,5]
+  candidates           = 4,096
+  VQE energy           = -12.157504555497 mH
+  Hamilton error       = 2.045404463055e-02 mH
+  variational gap      = 2.575991510788e-02 mH
+  total absolute error = 5.305870477335e-03 mH
+  note                  = total error can benefit from cancellation
+
+Lowest non-cancelling error budget in the sweep
+  k,r                  = (12, 6)
+  best q               = [14,15,10]
+  Hamilton error       = 6.009903091559e-03 mH
+  variational gap      = 1.194407747449e-02 mH
+  error budget (sum)   = 1.795398056605e-02 mH
+
+Cheapest pair meeting |total error| <= 0.1 mH
+  cost definition      = minimum exhaustive candidate evaluations; ties -> lower k
+  k,r                  = (8, 5)
+  best q               = [7,7,5]
+  candidates           = 4,096
+  total absolute error = 4.426846958321e-02 mH
+
+Cheapest pair meeting non-cancelling error budget <= 0.1 mH
+  k,r                  = (8, 5)
+  candidates           = 4,096
+  Hamilton error       = 7.054425208378e-02 mH
+  variational gap      = 2.627578250057e-02 mH
+  error budget (sum)   = 9.682003458434e-02 mH
+
+Saved CSV:     /Users/jav/PycharmProjects/hamcode_vqe_code_organized/results/hamilton_vqe/07_exhaustive_k_r_sweep/chem_vqe_sweep.csv
+Saved summary: /Users/jav/PycharmProjects/hamcode_vqe_code_organized/results/hamilton_vqe/07_exhaustive_k_r_sweep/summary.json
+Saved plots:   /Users/jav/PycharmProjects/hamcode_vqe_code_organized/results/hamilton_vqe/07_exhaustive_k_r_sweep/hamilton_error_vs_k.png
+               /Users/jav/PycharmProjects/hamcode_vqe_code_organized/results/hamilton_vqe/07_exhaustive_k_r_sweep/variational_gap_vs_r.png
+               /Users/jav/PycharmProjects/hamcode_vqe_code_organized/results/hamilton_vqe/07_exhaustive_k_r_sweep/total_error_heatmap.png

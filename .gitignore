@@ -1,0 +1,39 @@
+# IDE files
+.idea/
+.vscode/
+*.iml
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+
+# Haskell / Cabal
+dist-newstyle/
+.stack-work/
+*.o
+*.hi
+*.dyn_o
+*.dyn_hi
+
+# macOS / Windows
+.DS_Store
+__MACOSX/
+Thumbs.db
+
+# Local secrets
+.env
+.env.*
+!.env.example
+
+# Rebuildable artifacts
+build/
+dist/
+
+# Keep ALL experiment results, including logs.
+# Do not ignore results/ or *.log.

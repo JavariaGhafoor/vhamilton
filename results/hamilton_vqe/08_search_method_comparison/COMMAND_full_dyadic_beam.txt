@@ -1,0 +1,1 @@
+cabal run chem-vqe -- 14 7 0 refine

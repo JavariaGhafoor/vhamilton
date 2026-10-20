@@ -1,0 +1,141 @@
+target k=14: ground -0.233686213;  program optimum on the r=7 grid -0.233565660 at (28, 22, 16)  (gap to ground 0.0063 mHa)
+
+Landscapes (exhaustive over 262,144 valuations)
+  n=0 canon compiled min -0.233506 at (28, 30, 19)  true -0.192928  regret 2.115 mHa  below program 0.000 mHa  mean|E_n-E| 4.936 mHa  near optimum 1.0771 mHa
+  n=0 sym   compiled min -0.233506 at (28, 30, 19)  true -0.192928  regret 2.115 mHa  below program 0.000 mHa  mean|E_n-E| 4.936 mHa  near optimum 1.0771 mHa
+  n=1 canon compiled min -0.233660 at (28, 24, 18)  true -0.231167  regret 0.125 mHa  below program -0.005 mHa  mean|E_n-E| 1.372 mHa  near optimum 0.4302 mHa
+  n=1 sym   compiled min -0.233414 at (28, 21, 17)  true -0.232228  regret 0.070 mHa  below program 0.000 mHa  mean|E_n-E| 5.842 mHa  near optimum 0.7595 mHa
+  n=2 canon compiled min -0.233640 at (28, 23, 17)  true -0.233221  regret 0.018 mHa  below program -0.004 mHa  mean|E_n-E| 0.582 mHa  near optimum 0.1994 mHa
+  n=2 sym   compiled min -0.233567 at (28, 22, 17)  true -0.233456  regret 0.006 mHa  below program -0.000 mHa  mean|E_n-E| 0.793 mHa  near optimum 0.1276 mHa
+  n=3 canon compiled min -0.233526 at (28, 23, 17)  true -0.233221  regret 0.018 mHa  below program 0.000 mHa  mean|E_n-E| 0.280 mHa  near optimum 0.0968 mHa
+  n=3 sym   compiled min -0.233569 at (28, 22, 16)  true -0.233566  regret 0.000 mHa  below program -0.000 mHa  mean|E_n-E| 0.174 mHa  near optimum 0.0292 mHa
+  n=4 canon compiled min -0.233460 at (28, 22, 17)  true -0.233456  regret 0.006 mHa  below program 0.000 mHa  mean|E_n-E| 0.139 mHa  near optimum 0.0479 mHa
+  n=4 sym   compiled min -0.233567 at (28, 22, 16)  true -0.233566  regret 0.000 mHa  below program -0.000 mHa  mean|E_n-E| 0.042 mHa  near optimum 0.0072 mHa
+  n=5 canon compiled min -0.233518 at (28, 22, 16)  true -0.233566  regret 0.000 mHa  below program 0.000 mHa  mean|E_n-E| 0.069 mHa  near optimum 0.0238 mHa
+  n=5 sym   compiled min -0.233566 at (28, 22, 16)  true -0.233566  regret 0.000 mHa  below program -0.000 mHa  mean|E_n-E| 0.010 mHa  near optimum 0.0018 mHa
+
+Search methods at each level (queries / atom-applications / q / true regret)
+  n=0 canon exhaustive       262144 q (28, 30, 19)    1310720 atoms  regret 2.115 mHa
+  n=0 canon refine              307 q (28, 30, 19)       1535 atoms  regret 2.115 mHa
+  n=0 canon coordinate          185 q (28, 30, 19)        925 atoms  regret 2.115 mHa
+  n=0 canon analytic_naive      133 q (28, 30, 19)        665 atoms  regret 2.115 mHa  fit residual 2.8e-16  cond 2.8e+01
+  n=0 canon direct_naive         38 q (28, 30, 19)        190 atoms  regret 2.115 mHa  fit residual 2.5e-16  cond 2.8e+01
+  n=0 canon analytic_aware      133 q (28, 30, 19)        665 atoms  regret 2.115 mHa  fit residual 2.8e-16  cond 2.8e+01
+  n=0 canon direct_aware         38 q (28, 30, 19)        190 atoms  regret 2.115 mHa  fit residual 2.5e-16  cond 2.8e+01
+  n=0 sym   exhaustive       262144 q (28, 30, 19)    1310720 atoms  regret 2.115 mHa
+  n=0 sym   refine              307 q (28, 30, 19)       1535 atoms  regret 2.115 mHa
+  n=0 sym   coordinate          185 q (28, 30, 19)        925 atoms  regret 2.115 mHa
+  n=0 sym   analytic_naive      133 q (28, 30, 19)        665 atoms  regret 2.115 mHa  fit residual 2.8e-16  cond 2.8e+01
+  n=0 sym   direct_naive         38 q (28, 30, 19)        190 atoms  regret 2.115 mHa  fit residual 2.5e-16  cond 2.8e+01
+  n=0 sym   analytic_aware      133 q (28, 30, 19)        665 atoms  regret 2.115 mHa  fit residual 2.8e-16  cond 2.8e+01
+  n=0 sym   direct_aware         38 q (28, 30, 19)        190 atoms  regret 2.115 mHa  fit residual 2.5e-16  cond 2.8e+01
+  n=1 canon exhaustive       262144 q (28, 24, 18)    2621440 atoms  regret 0.125 mHa
+  n=1 canon refine              316 q (28, 24, 18)       3160 atoms  regret 0.125 mHa
+  n=1 canon coordinate          163 q (28, 24, 18)       1630 atoms  regret 0.125 mHa
+  n=1 canon analytic_naive      135 q (28, 24, 18)       1350 atoms  regret 0.125 mHa  fit residual 1.3e-03  cond 2.8e+01
+  n=1 canon direct_naive         44 q (28, 24, 18)        440 atoms  regret 0.125 mHa  fit residual 1.3e-03  cond 2.8e+01
+  n=1 canon analytic_aware      196 q (28, 24, 18)       1960 atoms  regret 0.125 mHa  fit residual 3.3e-16  cond 2.2e+06
+  n=1 canon direct_aware         77 q (28, 24, 18)        770 atoms  regret 0.125 mHa  fit residual 3.3e-16  cond 2.2e+06
+  n=1 sym   exhaustive       262144 q (28, 21, 17)    2621440 atoms  regret 0.070 mHa
+  n=1 sym   refine              319 q (28, 21, 17)       3190 atoms  regret 0.070 mHa
+  n=1 sym   coordinate          179 q (28, 21, 17)       1790 atoms  regret 0.070 mHa
+  n=1 sym   analytic_naive      145 q (29, 21, 17)       1450 atoms  regret 0.066 mHa  fit residual 1.2e-02  cond 2.8e+01
+  n=1 sym   direct_naive         37 q (29, 21, 17)        370 atoms  regret 0.066 mHa  fit residual 2.5e-03  cond 2.8e+01
+  n=1 sym   analytic_aware      199 q (28, 21, 17)       1990 atoms  regret 0.070 mHa  fit residual 5.3e-16  cond 2.2e+06
+  n=1 sym   direct_aware         73 q (28, 21, 17)        730 atoms  regret 0.070 mHa  fit residual 2.2e-16  cond 2.2e+06
+  n=2 canon exhaustive       262144 q (28, 23, 17)    5242880 atoms  regret 0.018 mHa
+  n=2 canon refine              316 q (28, 23, 17)       6320 atoms  regret 0.018 mHa
+  n=2 canon coordinate          172 q (28, 23, 17)       3440 atoms  regret 0.018 mHa
+  n=2 canon analytic_naive      143 q (28, 23, 17)       2860 atoms  regret 0.018 mHa  fit residual 2.1e-03  cond 2.8e+01
+  n=2 canon direct_naive         52 q (28, 23, 17)       1040 atoms  regret 0.018 mHa  fit residual 2.1e-03  cond 2.8e+01
+  n=2 canon analytic_aware      302 q (28, 23, 17)       6040 atoms  regret 0.018 mHa  fit residual 3.1e-16  cond 5.9e+17
+  n=2 canon direct_aware        113 q (28, 23, 17)       2260 atoms  regret 0.018 mHa  fit residual 2.2e-16  cond 5.9e+17
+  n=2 sym   exhaustive       262144 q (28, 22, 17)    5242880 atoms  regret 0.006 mHa
+  n=2 sym   refine              316 q (28, 22, 17)       6320 atoms  regret 0.006 mHa
+  n=2 sym   coordinate          177 q (28, 22, 17)       3540 atoms  regret 0.006 mHa
+  n=2 sym   analytic_naive      159 q (28, 22, 16)       3180 atoms  regret 0.000 mHa  fit residual 2.9e-03  cond 2.8e+01
+  n=2 sym   direct_naive         37 q (29, 22, 17)        740 atoms  regret 0.020 mHa  fit residual 1.9e-03  cond 2.8e+01
+  n=2 sym   analytic_aware      335 q (28, 22, 17)       6700 atoms  regret 0.006 mHa  fit residual 3.1e-16  cond 5.9e+17
+  n=2 sym   direct_aware        129 q (28, 22, 17)       2580 atoms  regret 0.006 mHa  fit residual 3.1e-16  cond 5.9e+17
+  n=3 canon exhaustive       262144 q (28, 23, 17)   10485760 atoms  regret 0.018 mHa
+  n=3 canon refine              316 q (28, 23, 17)      12640 atoms  regret 0.018 mHa
+  n=3 canon coordinate          169 q (28, 23, 17)       6760 atoms  regret 0.018 mHa
+  n=3 canon analytic_naive      144 q (28, 23, 17)       5760 atoms  regret 0.018 mHa  fit residual 2.2e-03  cond 2.8e+01
+  n=3 canon direct_naive         47 q (28, 23, 17)       1880 atoms  regret 0.018 mHa  fit residual 2.2e-03  cond 2.8e+01
+  n=3 canon analytic_aware      596 q (28, 23, 17)      23840 atoms  regret 0.018 mHa  fit residual 5.6e-16  cond 3.3e+18
+  n=3 canon direct_aware        268 q (28, 23, 17)      10720 atoms  regret 0.018 mHa  fit residual 3.3e-16  cond 3.3e+18
+  n=3 sym   exhaustive       262144 q (28, 22, 16)   10485760 atoms  regret 0.000 mHa
+  n=3 sym   refine              316 q (28, 22, 16)      12640 atoms  regret 0.000 mHa
+  n=3 sym   coordinate          177 q (28, 22, 16)       7080 atoms  regret 0.000 mHa
+  n=3 sym   analytic_naive      128 q (29, 22, 17)       5120 atoms  regret 0.020 mHa  fit residual 1.8e-03  cond 2.8e+01
+  n=3 sym   direct_naive         37 q (29, 22, 17)       1480 atoms  regret 0.020 mHa  fit residual 1.8e-03  cond 2.8e+01
+  n=3 sym   analytic_aware      596 q (28, 22, 16)      23840 atoms  regret 0.000 mHa  fit residual 6.4e-16  cond 3.3e+18
+  n=3 sym   direct_aware        301 q (28, 22, 16)      12040 atoms  regret 0.000 mHa  fit residual 3.6e-16  cond 3.3e+18
+  n=4 canon exhaustive       262144 q (28, 22, 17)   20971520 atoms  regret 0.006 mHa
+  n=4 canon refine              316 q (28, 22, 17)      25280 atoms  regret 0.006 mHa
+  n=4 canon coordinate          177 q (28, 22, 17)      14160 atoms  regret 0.006 mHa
+  n=4 canon analytic_naive      152 q (28, 22, 16)      12160 atoms  regret 0.000 mHa  fit residual 2.6e-03  cond 2.8e+01
+  n=4 canon direct_naive         51 q (28, 22, 16)       4080 atoms  regret 0.000 mHa  fit residual 2.6e-03  cond 2.8e+01
+  n=4 canon analytic_aware      162 q (30, 16, 16)      12960 atoms  regret 1.294 mHa  fit residual 2.8e-16  cond 3.3e+18  UNFITTABLE clocks [1, 2]
+  n=4 canon direct_aware         35 q (30, 16, 16)       2800 atoms  regret 1.294 mHa  fit residual 1.9e-16  cond 3.3e+18  UNFITTABLE clocks [1, 2]
+  n=4 sym   exhaustive       262144 q (28, 22, 16)   20971520 atoms  regret 0.000 mHa
+  n=4 sym   refine              316 q (28, 22, 16)      25280 atoms  regret 0.000 mHa
+  n=4 sym   coordinate          177 q (28, 22, 16)      14160 atoms  regret 0.000 mHa
+  n=4 sym   analytic_naive      128 q (29, 22, 17)      10240 atoms  regret 0.020 mHa  fit residual 1.8e-03  cond 2.8e+01
+  n=4 sym   direct_naive         37 q (29, 22, 17)       2960 atoms  regret 0.020 mHa  fit residual 1.8e-03  cond 2.8e+01
+  n=4 sym   analytic_aware      162 q (30, 16, 16)      12960 atoms  regret 1.294 mHa  fit residual 4.4e-16  cond 3.3e+18  UNFITTABLE clocks [1, 2]
+  n=4 sym   direct_aware         35 q (30, 16, 16)       2800 atoms  regret 1.294 mHa  fit residual 4.4e-16  cond 3.3e+18  UNFITTABLE clocks [1, 2]
+  n=5 canon exhaustive       262144 q (28, 22, 16)   41943040 atoms  regret 0.000 mHa
+  n=5 canon refine              316 q (28, 22, 16)      50560 atoms  regret 0.000 mHa
+  n=5 canon coordinate          177 q (28, 22, 16)      28320 atoms  regret 0.000 mHa
+  n=5 canon analytic_naive      157 q (28, 22, 16)      25120 atoms  regret 0.000 mHa  fit residual 2.6e-03  cond 2.8e+01
+  n=5 canon direct_naive         37 q (29, 22, 17)       5920 atoms  regret 0.020 mHa  fit residual 1.7e-03  cond 2.8e+01
+  n=5 canon analytic_aware       64 q (32, 16, 16)      10240 atoms  regret 1.654 mHa  UNFITTABLE clocks [0, 1, 2]
+  n=5 canon direct_aware          1 q (16, 16, 16)        160 atoms  regret 11.255 mHa  UNFITTABLE clocks [0, 1, 2]
+  n=5 sym   exhaustive       262144 q (28, 22, 16)   41943040 atoms  regret 0.000 mHa
+  n=5 sym   refine              316 q (28, 22, 16)      50560 atoms  regret 0.000 mHa
+  n=5 sym   coordinate          177 q (28, 22, 16)      28320 atoms  regret 0.000 mHa
+  n=5 sym   analytic_naive      128 q (29, 22, 17)      20480 atoms  regret 0.020 mHa  fit residual 1.8e-03  cond 2.8e+01
+  n=5 sym   direct_naive         37 q (29, 22, 17)       5920 atoms  regret 0.020 mHa  fit residual 1.8e-03  cond 2.8e+01
+  n=5 sym   analytic_aware       64 q (32, 16, 16)      10240 atoms  regret 1.654 mHa  UNFITTABLE clocks [0, 1, 2]
+  n=5 sym   direct_aware          1 q (16, 16, 16)        160 atoms  regret 11.255 mHa  UNFITTABLE clocks [0, 1, 2]
+
+Certificate: re-evaluate the level-n optimum once at level n+1
+  n=0 canon q (28, 30, 19)  E_n -0.233506  E_(n+1) -0.216870  jump +0.866 mHa  true regret 2.115 mHa
+  n=0 sym   q (28, 30, 19)  E_n -0.233506  E_(n+1) -0.163832  jump +3.626 mHa  true regret 2.115 mHa
+  n=1 canon q (28, 24, 18)  E_n -0.233660  E_(n+1) -0.232804  jump +0.045 mHa  true regret 0.125 mHa
+  n=1 sym   q (28, 21, 17)  E_n -0.233414  E_(n+1) -0.232586  jump +0.043 mHa  true regret 0.070 mHa
+  n=2 canon q (28, 23, 17)  E_n -0.233640  E_(n+1) -0.233526  jump +0.006 mHa  true regret 0.018 mHa
+  n=2 sym   q (28, 22, 17)  E_n -0.233567  E_(n+1) -0.233491  jump +0.004 mHa  true regret 0.006 mHa
+  n=3 canon q (28, 23, 17)  E_n -0.233526  E_(n+1) -0.233395  jump +0.007 mHa  true regret 0.018 mHa
+  n=3 sym   q (28, 22, 16)  E_n -0.233569  E_(n+1) -0.233567  jump +0.000 mHa  true regret 0.000 mHa
+  n=4 canon q (28, 22, 17)  E_n -0.233460  E_(n+1) -0.233464  jump -0.000 mHa  true regret 0.006 mHa
+  n=4 sym   q (28, 22, 16)  E_n -0.233567  E_(n+1) -0.233566  jump +0.000 mHa  true regret 0.000 mHa
+  n=5 canon q (28, 22, 16)  E_n -0.233518  E_(n+1) -0.233543  jump -0.001 mHa  true regret 0.000 mHa
+  n=5 sym   q (28, 22, 16)  E_n -0.233566  E_(n+1) -0.233566  jump +0.000 mHa  true regret 0.000 mHa
+
+Continuation in n: analytic-direct at n=0, then warm-started local search at n=1,2,...
+  canon axial n=0 + 38 queries (total   38,    190 atoms)  q (28, 30, 19)  regret 2.115 mHa
+  canon axial n=1 + 72 queries (total  110,    910 atoms)  q (28, 24, 18)  regret 0.125 mHa  E_n(prev) - E_(n-1)(prev) = +0.866 mHa
+  canon axial n=2 + 27 queries (total  137,   1450 atoms)  q (28, 23, 17)  regret 0.018 mHa  E_n(prev) - E_(n-1)(prev) = +0.045 mHa
+  canon axial n=3 + 20 queries (total  157,   2250 atoms)  q (28, 23, 17)  regret 0.018 mHa  E_n(prev) - E_(n-1)(prev) = +0.006 mHa
+  canon axial n=4 + 20 queries (total  177,   3850 atoms)  q (28, 22, 17)  regret 0.006 mHa  E_n(prev) - E_(n-1)(prev) = +0.007 mHa
+  canon axial n=5 + 16 queries (total  193,   6410 atoms)  q (28, 22, 16)  regret 0.000 mHa  E_n(prev) - E_(n-1)(prev) = -0.000 mHa
+  canon aware n=0 + 38 queries (total   38,    190 atoms)  q (28, 30, 19)  regret 2.115 mHa
+  canon aware n=1 + 51 queries (total   89,    700 atoms)  q (28, 24, 18)  regret 0.125 mHa  E_n(prev) - E_(n-1)(prev) = +0.866 mHa
+  canon aware n=2 + 69 queries (total  158,   2080 atoms)  q (28, 23, 17)  regret 0.018 mHa  E_n(prev) - E_(n-1)(prev) = +0.045 mHa
+  canon aware n=3 + 82 queries (total  240,   5360 atoms)  q (28, 23, 17)  regret 0.018 mHa  E_n(prev) - E_(n-1)(prev) = +0.006 mHa
+  canon aware n=4 + 34 queries (total  274,   8080 atoms)  q (28, 23, 17)  regret 0.018 mHa  E_n(prev) - E_(n-1)(prev) = +0.007 mHa
+  canon aware n=5 +  1 queries (total  275,   8240 atoms)  q (28, 23, 17)  regret 0.018 mHa  E_n(prev) - E_(n-1)(prev) = +0.004 mHa
+  sym   axial n=0 + 38 queries (total   38,    190 atoms)  q (28, 30, 19)  regret 2.115 mHa
+  sym   axial n=1 + 91 queries (total  129,   1100 atoms)  q (28, 21, 17)  regret 0.070 mHa  E_n(prev) - E_(n-1)(prev) = +3.626 mHa
+  sym   axial n=2 + 26 queries (total  155,   1620 atoms)  q (28, 22, 17)  regret 0.006 mHa  E_n(prev) - E_(n-1)(prev) = +0.043 mHa
+  sym   axial n=3 + 16 queries (total  171,   2260 atoms)  q (28, 22, 16)  regret 0.000 mHa  E_n(prev) - E_(n-1)(prev) = +0.004 mHa
+  sym   axial n=4 + 20 queries (total  191,   3860 atoms)  q (28, 22, 16)  regret 0.000 mHa  E_n(prev) - E_(n-1)(prev) = +0.000 mHa
+  sym   axial n=5 + 20 queries (total  211,   7060 atoms)  q (28, 22, 16)  regret 0.000 mHa  E_n(prev) - E_(n-1)(prev) = +0.000 mHa
+  sym   aware n=0 + 38 queries (total   38,    190 atoms)  q (28, 30, 19)  regret 2.115 mHa
+  sym   aware n=1 + 40 queries (total   78,    590 atoms)  q (28, 22, 18)  regret 0.040 mHa  E_n(prev) - E_(n-1)(prev) = +3.626 mHa
+  sym   aware n=2 + 84 queries (total  162,   2270 atoms)  q (28, 22, 17)  regret 0.006 mHa  E_n(prev) - E_(n-1)(prev) = +0.012 mHa
+  sym   aware n=3 +134 queries (total  296,   7630 atoms)  q (28, 22, 16)  regret 0.000 mHa  E_n(prev) - E_(n-1)(prev) = +0.004 mHa
+  sym   aware n=4 + 34 queries (total  330,  10350 atoms)  q (28, 22, 16)  regret 0.000 mHa  E_n(prev) - E_(n-1)(prev) = +0.000 mHa
+  sym   aware n=5 +  1 queries (total  331,  10510 atoms)  q (28, 22, 16)  regret 0.000 mHa  E_n(prev) - E_(n-1)(prev) = +0.000 mHa

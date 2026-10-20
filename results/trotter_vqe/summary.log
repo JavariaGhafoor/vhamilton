@@ -1,0 +1,5 @@
+r=4 n=0  grid=256  best q=[2,11]  best E=-1.414213562373  exact ground=-1.732050807569  -> trotter_grid_r4_n0.csv
+r=4 n=1  grid=256  best q=[2,11]  best E=-1.713941654218  exact ground=-1.732050807569  -> trotter_grid_r4_n1.csv
+r=4 n=2  grid=256  best q=[0,11]  best E=-1.414213562373  exact ground=-1.732050807569  -> trotter_grid_r4_n2.csv
+r=4 n=3  grid=256  best q=[0,11]  best E=-1.414213562373  exact ground=-1.732050807569  -> trotter_grid_r4_n3.csv
+r=4 n=4  grid=256  best q=[0,11]  best E=-1.414213562373  exact ground=-1.732050807569  -> trotter_grid_r4_n4.csv

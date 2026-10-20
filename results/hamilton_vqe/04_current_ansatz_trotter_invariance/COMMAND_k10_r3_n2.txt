@@ -1,0 +1,1 @@
+cabal run chem-vqe -- 10 3 2 exhaustive

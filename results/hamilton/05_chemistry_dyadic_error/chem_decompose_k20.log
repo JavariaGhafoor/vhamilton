@@ -1,0 +1,57 @@
+{
+  "scale": 0.019212480427285565,
+  "level": 20,
+  "identity_coeff_mh": 9.418625,
+  "scaled_identity": 0.18095514846444252,
+  "identity_num": 189745,
+  "identity_k": 20,
+  "physical_ground_mh": -12.162810425974142,
+  "scaled_physical_ground": -0.233677757249813,
+  "terms": [
+    {
+      "pauli": "ZI",
+      "num": 262144,
+      "k": 20
+    },
+    {
+      "pauli": "IZ",
+      "num": 192545,
+      "k": 20
+    },
+    {
+      "pauli": "IX",
+      "num": -145511,
+      "k": 20
+    },
+    {
+      "pauli": "ZZ",
+      "num": 114657,
+      "k": 20
+    },
+    {
+      "pauli": "XX",
+      "num": -78109,
+      "k": 20
+    },
+    {
+      "pauli": "YY",
+      "num": -78061,
+      "k": 20
+    },
+    {
+      "pauli": "XI",
+      "num": 15703,
+      "k": 20
+    },
+    {
+      "pauli": "ZX",
+      "num": -6324,
+      "k": 20
+    },
+    {
+      "pauli": "XZ",
+      "num": -1234,
+      "k": 20
+    }
+  ]
+}

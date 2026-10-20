@@ -1,0 +1,100 @@
+cabal-version:      2.4
+name:               pih
+version:            0.1.0.0
+synopsis:           Interleaving Semantics for Hamiltonians
+description:        Generate and compare circuit families from Hamiltonians
+license:            BSD-3-Clause
+author:             Anonymous
+maintainer:         a@a.a
+build-type:         Simple
+
+common warnings
+  ghc-options: -Wall
+
+common deps
+  build-depends:
+    base            >= 4.17.2.1,
+    process,
+    bytestring,
+    aeson,
+    text            >= 2.1.2,
+    filepath,
+    directory,
+    containers
+  default-language: Haskell2010
+  default-extensions:
+    LambdaCase
+    OverloadedStrings
+    DeriveGeneric
+    ScopedTypeVariables
+    TypeOperators
+
+library
+  import:           warnings, deps
+  exposed-modules:
+    Syntax
+    Semantics
+    Compiler
+    Qasm
+    Denot
+    Examples
+    ExamplesChem
+    ExamplesVHamilton
+    Quantikz
+    VQE
+  hs-source-dirs:   src
+
+executable gen-tables
+  import:           warnings, deps
+  main-is:          GenTables.hs
+  hs-source-dirs:   app
+  build-depends:    pih
+
+executable gen-circuits
+  import:           warnings, deps
+  main-is:          GenCircuits.hs
+  hs-source-dirs:   app
+  build-depends:    pih
+
+executable vhamilton-demo
+  import:           warnings, deps
+  main-is:          VHamiltonDemo.hs
+  hs-source-dirs:   app
+  build-depends:    pih
+
+executable vqe-demo
+  import:           warnings, deps
+  main-is:          VQEDemo.hs
+  hs-source-dirs:   app
+  build-depends:    pih
+
+executable chem-vqe
+  import:           warnings, deps
+  main-is:          ChemVQE.hs
+  hs-source-dirs:   app
+  build-depends:    pih
+
+test-suite regression
+  import:           warnings, deps
+  type:             exitcode-stdio-1.0
+  main-is:          Regression.hs
+  hs-source-dirs:   test
+  build-depends:    pih
+
+executable qaoa-demo
+  import:           warnings, deps
+  main-is:          QAOADemo.hs
+  hs-source-dirs:   app
+  build-depends:    pih
+
+executable trotter-vqe-demo
+  import:           warnings, deps
+  main-is:          TrotterVQEDemo.hs
+  hs-source-dirs:   app
+  build-depends:    pih
+
+executable trotter-chem-energies
+  import:           warnings, deps
+  main-is:          TrotterChemEnergies.hs
+  hs-source-dirs:   app
+  build-depends:    pih

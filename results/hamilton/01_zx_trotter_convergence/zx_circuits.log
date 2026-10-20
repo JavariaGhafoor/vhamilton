@@ -1,0 +1,13 @@
+Build profile: -w ghc-9.4.8 -O1
+In order, the following will be built (use -v for more details):
+ - pih-0.1.0.0 (exe:gen-circuits) (first run)
+Configuring executable 'gen-circuits' for pih-0.1.0.0..
+Preprocessing executable 'gen-circuits' for pih-0.1.0.0..
+Building executable 'gen-circuits' for pih-0.1.0.0..
+[1 of 1] Compiling Main             ( app/GenCircuits.hs, /Users/jav/PycharmProjects/hamcode_vqe_code_organized/dist-newstyle/build/aarch64-osx/ghc-9.4.8/pih-0.1.0.0/x/gen-circuits/build/gen-circuits/gen-circuits-tmp/Main.o )
+[2 of 2] Linking /Users/jav/PycharmProjects/hamcode_vqe_code_organized/dist-newstyle/build/aarch64-osx/ghc-9.4.8/pih-0.1.0.0/x/gen-circuits/build/gen-circuits/gen-circuits
+ld: warning: ignoring duplicate libraries: '-lm'
+Generating circuits...
+  wrote /Users/jav/PycharmProjects/hamcode_vqe_code_organized/results/hamilton/01_zx_trotter_convergence/circuit_zx_n0.tex
+  wrote /Users/jav/PycharmProjects/hamcode_vqe_code_organized/results/hamilton/01_zx_trotter_convergence/circuit_zx_n1.tex
+ZX circuits written.

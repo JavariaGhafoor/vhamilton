@@ -1,0 +1,1 @@
+cabal run gen-tables -- /Users/jav/PycharmProjects/hamcode_vqe_code_organized/results/hamilton/02_zx_schedule_orderings zx-orderings

@@ -1,0 +1,6 @@
+method,queries,best_q,reference_grid,reduction
+exhaustive_reference,262144,"[28,30,19]",262144,1.0
+full_dyadic_beam,315,"[28,30,19]",262144,832.2
+analytic,128,"[28,30,19]",262144,2048.0
+coordinate_beam,189,"[28,30,19]",262144,1387.0
+analytic_direct,38,"[28,30,19]",262144,6898.5

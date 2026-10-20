@@ -1,0 +1,1 @@
+cabal run gen-circuits -- /Users/jav/PycharmProjects/hamcode_vqe_code_organized/results/hamilton/01_zx_trotter_convergence zx

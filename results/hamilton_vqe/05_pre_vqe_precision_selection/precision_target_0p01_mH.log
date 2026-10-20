@@ -1,0 +1,25 @@
+DMANH+ pre-VQE precision prediction
+  VQE search performed          = no
+  target non-cancelling budget = 0.01 mH
+  physical exact ground        = -12.162810425974 mH
+  k scan                       = 3..16
+  r scan                       = 2..10
+
+Recommended precisions before running VQE
+  k                            = 14
+  r                            = 7
+  predicted q near optimum     = [28, 30, 19]
+  later exhaustive candidates = 262,144
+  Hamilton dyadic error        = 4.401120603887e-04 mH
+  parameter rounding bound     = 9.404618792678e-03 mH
+  non-cancelling budget        = 9.844730853066e-03 mH
+  constructed candidate error  = +8.964506732289e-03 mH
+  continuous alpha*            = [0.217495324, 0.232456754, 0.151582973]
+  rounded alpha                = [0.218750000, 0.234375000, 0.148437500]
+  details written to           = /Users/jav/PycharmProjects/hamcode_vqe_code_organized/results/hamilton_vqe/05_pre_vqe_precision_selection/precision_target_0p01_mH.json
+
+Run the actual compiler-backed VQE only after this selection:
+  cabal run chem-vqe -- 14 7 0
+
+Optional validation experiment (not needed for selection):
+  python -m scripts.experiments.chem_vqe_sweep --target-error-mh 0.01

@@ -1,0 +1,1 @@
+cabal run trotter-vqe-demo -- 4 0 1 2 3 4

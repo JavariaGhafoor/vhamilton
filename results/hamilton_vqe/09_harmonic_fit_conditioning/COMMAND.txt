@@ -1,0 +1,1 @@
+computed directly from validate_analytic_direct.V_G1 and V_G23

@@ -1,0 +1,10 @@
+Build profile: -w ghc-9.4.8 -O1
+In order, the following will be built (use -v for more details):
+ - pih-0.1.0.0 (exe:gen-tables) (file app/GenTables.hs changed)
+Preprocessing executable 'gen-tables' for pih-0.1.0.0..
+Building executable 'gen-tables' for pih-0.1.0.0..
+[1 of 1] Compiling Main             ( app/GenTables.hs, /Users/jav/PycharmProjects/hamcode_vqe_code_organized/dist-newstyle/build/aarch64-osx/ghc-9.4.8/pih-0.1.0.0/x/gen-tables/build/gen-tables/gen-tables-tmp/Main.o ) [Source file changed]
+[2 of 2] Linking /Users/jav/PycharmProjects/hamcode_vqe_code_organized/dist-newstyle/build/aarch64-osx/ghc-9.4.8/pih-0.1.0.0/x/gen-tables/build/gen-tables/gen-tables [Objects changed]
+ld: warning: ignoring duplicate libraries: '-lm'
+Generating ZX convergence table...
+  done.

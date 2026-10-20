@@ -1,0 +1,15 @@
+n=0 canon points=6  max |haskell - numpy| = 9.71e-16
+n=0 sym   points=6  max |haskell - numpy| = 1.55e-15
+n=1 canon points=6  max |haskell - numpy| = 1.11e-15
+n=1 sym   points=6  max |haskell - numpy| = 2.66e-15
+n=2 canon points=6  max |haskell - numpy| = 3.16e-15
+n=2 sym   points=6  max |haskell - numpy| = 2.72e-15
+n=3 canon points=6  max |haskell - numpy| = 3.50e-15
+n=3 sym   points=6  max |haskell - numpy| = 1.03e-14
+n=4 canon points=6  max |haskell - numpy| = 1.99e-14
+n=4 sym   points=6  max |haskell - numpy| = 6.52e-15
+worst difference 1.99e-14
+
+real	15m4.738s
+user	25m21.302s
+sys	1m42.723s

@@ -1,0 +1,8 @@
+k=14, r=7, candidates=262144
+best q                  = [28, 30, 19]
+full VQE energy scaled  = -0.233505526840
+ground H_k scaled       = -0.233686212894
+variational gap scaled  = 1.806860544804e-04
+VQE energy (mH)         = -12.153845919242
+ground H_k (mH)         = -12.163250538035
+physical exact (mH)     = -12.162810425974

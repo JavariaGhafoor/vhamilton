@@ -1,0 +1,1 @@
+/Users/jav/PycharmProjects/hamcode_vqe_code_organized/.venv/bin/python -m scripts.chemistry.chem_decompose_vqe --target-error-mh 0.001 --output-json /Users/jav/PycharmProjects/hamcode_vqe_code_organized/results/hamilton_vqe/05_pre_vqe_precision_selection/precision_target_0p001_mH.json

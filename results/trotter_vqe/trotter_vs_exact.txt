@@ -1,0 +1,6 @@
+exact family minimum (continuous scan): -1.414214; ground energy: -1.732051
+n=0: compiled best -1.414214 at q=(0,3); exact there -1.414214; mean |compiled-exact| 1.044, max 3.124; below exact minimum: 0
+n=1: compiled best -1.713942 at q=(2,11); exact there -1.016003; mean |compiled-exact| 0.635, max 3.038; below exact minimum: 6
+n=2: compiled best -1.414214 at q=(0,3); exact there -1.414214; mean |compiled-exact| 0.530, max 2.126; below exact minimum: 0
+n=3: compiled best -1.414214 at q=(0,3); exact there -1.414214; mean |compiled-exact| 0.235, max 1.790; below exact minimum: 0
+n=4: compiled best -1.414214 at q=(0,3); exact there -1.414214; mean |compiled-exact| 0.103, max 0.627; below exact minimum: 0
