@@ -5,13 +5,14 @@
 --
 -- Checked with Agda 2.6.3 and agda-stdlib 1.7.3:
 --   agda -i . -i /usr/share/agda-stdlib VHamilton.agda
+-- Written to avoid the stdlib 1.x / 2.x difference in Data.Vec.replicate.
 ------------------------------------------------------------------------
 
 module VHamilton where
 
 open import Data.Nat     using (ℕ; zero; suc; _+_; _^_)
 open import Data.Fin     using (Fin; zero; suc)
-open import Data.Vec     using (Vec; []; _∷_; replicate; take; drop; _[_]≔_; toList; tabulate)
+open import Data.Vec     using (Vec; []; _∷_; take; drop; _[_]≔_; toList; tabulate)
                          renaming (_++_ to _++ᵥ_; map to mapᵥ; zipWith to zipWithᵥ)
 open import Data.List    using (List; []; _∷_; _++_; map; foldr; concat; zipWith)
 open import Data.Product using (_×_; _,_)
@@ -110,8 +111,13 @@ cj (_⊗_ {m} u v) P with cj u (take m P) | cj v (drop m P)
 LF : ℕ → Set
 LF m = ℚ × Vec ℚ m
 
+-- The zero vector, via tabulate: `replicate` takes its length explicitly
+-- in agda-stdlib 2.x but implicitly in 1.x, so we avoid it.
+zeros : ∀ {m} → Vec ℚ m
+zeros = tabulate (λ _ → 0ℚ)
+
 lf0 : ∀ {m} → LF m
-lf0 = 0ℚ , replicate 0ℚ
+lf0 = 0ℚ , zeros
 
 _⊞_ : ∀ {m} → LF m → LF m → LF m
 (c , v) ⊞ (d , w) = c +ℚ d , zipWithᵥ _+ℚ_ v w
@@ -156,12 +162,12 @@ pow½ zero    = + 1 / 1
 pow½ (suc k) = (+ 1 / 2) *ℚ pow½ k
 
 unit : ∀ {m} → Fin m → ℚ → LF m
-unit α q = 0ℚ , (replicate 0ℚ [ α ]≔ q)
+unit α q = 0ℚ , (zeros [ α ]≔ q)
 
 valS : ∀ {m} → Scalar m → LF m
 valS zer     = lf0
-valS (δ k)   = pow½ k , replicate 0ℚ
-valS (-δ k)  = -ℚ pow½ k , replicate 0ℚ
+valS (δ k)   = pow½ k , zeros
+valS (-δ k)  = -ℚ pow½ k , zeros
 valS (δ^ α)  = unit α (+ 1 / 1)
 valS (-δ^ α) = unit α (-ℚ (+ 1 / 1))
 
