@@ -19,9 +19,9 @@ Contents:
 * `⟦_⟧`: semantics as a list of Pauli terms whose coefficients are affine
   forms in the clock values; `d₀ ⊕ d₁ = 𝟙⊗(d₀+d₁)/2 + Z⊗(d₀−d₁)/2`.
 * `_≃_`: equal Pauli coefficients as affine forms (Hamiltonian equivalence); `sound` turns it into
-  equality under every valuation `ν` and level assignment `lvl`.
-* `ZZ≃CX-IZ-CX`: `ZZ(γ) ≃ CX (I⊗Z(γ)) CX†`, each of the 16 Pauli strings by
-  `refl`; `ZZ-equiv` is the statement for every valuation and level.
+  equality under every valuation `ν` and subscript assignment `k`.
+* `ZZ≃CX-IZ-CX`: `ZZ(γ) ≃ CX (I⊗Z(γ)) CX†`, all 16 Pauli strings by four
+  `refl` clauses, one per first Pauli; `ZZ-equiv` is the statement for every valuation and level.
 
 Scope: each variable is used at one level; the matrix semantics and the
 compiler are not formalized.  Changing one entry of `IZ` makes the proof fail

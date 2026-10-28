@@ -1,7 +1,7 @@
 ------------------------------------------------------------------------
 -- VHamilton: open clocks over Hamilton, with a symbolic Hamiltonian
 -- semantics in the Pauli basis, and a machine-checked equivalence of
--- two variational programs for every valuation and every clock level.
+-- two variational programs for every valuation and every clock subscript k.
 --
 -- Checked with Agda 2.6.3 and agda-stdlib 1.7.3:
 --   agda -i . -i /usr/share/agda-stdlib VHamilton.agda
@@ -105,8 +105,8 @@ cj (_⊗_ {m} u v) P with cj u (take m P) | cj v (drop m P)
 
 ------------------------------------------------------------------------
 -- Coefficients are affine forms in the clock values: a constant plus
--- one coefficient per variable.  Variable α stands for ν(α)/2^(lvl α),
--- so one symbolic computation covers every valuation and every level.
+-- one coefficient per variable.  Variable α stands for ν(α)/2^(k α),
+-- so one symbolic computation covers every valuation ν and every k.
 
 LF : ℕ → Set
 LF m = ℚ × Vec ℚ m
@@ -131,7 +131,7 @@ half = scale (+ 1 / 2)
 
 ------------------------------------------------------------------------
 -- Syntax.  Scalars are fixed clocks ±δ_k or open clocks ±δ^α; each
--- variable has one level, given separately.  Bare actions are balanced
+-- variable has one k, given separately.  Bare actions are balanced
 -- direct sums on qubits.
 
 data Scalar (m : ℕ) : Set where
@@ -203,27 +203,27 @@ coef h Q = foldr step lf0 h
 
 ------------------------------------------------------------------------
 -- Valuations.  A valuation fills each open clock with a natural number;
--- lvl α is the level k of the clock δ_k^α.
+-- k α is the subscript of the clock δ_k^α (one per variable).
 
 Val : ℕ → Set
 Val m = Fin m → ℕ
 
 evalLF : ∀ {m} → (Fin m → ℕ) → Val m → LF m → ℚ
-evalLF lvl ν (c , v) =
-  foldr _+ℚ_ c (toList (zipWithᵥ _*ℚ_ v (tabulate λ α → (+ ν α / 1) *ℚ pow½ (lvl α))))
+evalLF k ν (c , v) =
+  foldr _+ℚ_ c (toList (zipWithᵥ _*ℚ_ v (tabulate λ α → (+ ν α / 1) *ℚ pow½ (k α))))
 
 -- ⟦ p ⟧^ν : the coefficient of each Pauli string under a valuation.
 ⟦_⟧^ : ∀ {m n} → Proc m n → (Fin m → ℕ) → Val m → PString n → ℚ
-⟦ p ⟧^ lvl ν Q = evalLF lvl ν (coef ⟦ p ⟧ Q)
+⟦ p ⟧^ k ν Q = evalLF k ν (coef ⟦ p ⟧ Q)
 
 -- Hamiltonian equivalence: equal coefficients, as affine forms.
 _≃_ : ∀ {m n} → Proc m n → Proc m n → Set
 p ≃ q = ∀ Q → coef ⟦ p ⟧ Q ≡ coef ⟦ q ⟧ Q
 
--- It implies equality under every valuation, at every level.
+-- It implies equality under every valuation ν and every k.
 sound : ∀ {m n} {p q : Proc m n} → p ≃ q →
-        ∀ lvl ν Q → ⟦ p ⟧^ lvl ν Q ≡ ⟦ q ⟧^ lvl ν Q
-sound eq lvl ν Q = cong (evalLF lvl ν) (eq Q)
+        ∀ k ν Q → ⟦ p ⟧^ k ν Q ≡ ⟦ q ⟧^ k ν Q
+sound eq k ν Q = cong (evalLF k ν) (eq Q)
 
 ------------------------------------------------------------------------
 -- Example: one clock γ on two qubits.
@@ -243,28 +243,18 @@ CX-IZ-CX : Proc 1 2
 CX-IZ-CX = act (conj CX IZ)
 
 -- The two programs are equivalent: every Pauli coefficient agrees.
+-- Split on the first Pauli only; Agda computes both coefficients of the
+-- four strings in each clause, and refl closes all 16.
 ZZ≃CX-IZ-CX : ZZ ≃ CX-IZ-CX
-ZZ≃CX-IZ-CX (𝟙 ∷ 𝟙 ∷ []) = refl
-ZZ≃CX-IZ-CX (𝟙 ∷ X ∷ []) = refl
-ZZ≃CX-IZ-CX (𝟙 ∷ Y ∷ []) = refl
-ZZ≃CX-IZ-CX (𝟙 ∷ Z ∷ []) = refl
-ZZ≃CX-IZ-CX (X ∷ 𝟙 ∷ []) = refl
-ZZ≃CX-IZ-CX (X ∷ X ∷ []) = refl
-ZZ≃CX-IZ-CX (X ∷ Y ∷ []) = refl
-ZZ≃CX-IZ-CX (X ∷ Z ∷ []) = refl
-ZZ≃CX-IZ-CX (Y ∷ 𝟙 ∷ []) = refl
-ZZ≃CX-IZ-CX (Y ∷ X ∷ []) = refl
-ZZ≃CX-IZ-CX (Y ∷ Y ∷ []) = refl
-ZZ≃CX-IZ-CX (Y ∷ Z ∷ []) = refl
-ZZ≃CX-IZ-CX (Z ∷ 𝟙 ∷ []) = refl
-ZZ≃CX-IZ-CX (Z ∷ X ∷ []) = refl
-ZZ≃CX-IZ-CX (Z ∷ Y ∷ []) = refl
-ZZ≃CX-IZ-CX (Z ∷ Z ∷ []) = refl
+ZZ≃CX-IZ-CX (𝟙 ∷ _ ∷ []) = refl
+ZZ≃CX-IZ-CX (X ∷ _ ∷ []) = refl
+ZZ≃CX-IZ-CX (Y ∷ _ ∷ []) = refl
+ZZ≃CX-IZ-CX (Z ∷ _ ∷ []) = refl
 
--- Hence they denote the same Hamiltonian for every valuation and level.
-ZZ-equiv : ∀ lvl ν Q → ⟦ ZZ ⟧^ lvl ν Q ≡ ⟦ CX-IZ-CX ⟧^ lvl ν Q
+-- Hence they denote the same Hamiltonian for every valuation ν and every k.
+ZZ-equiv : ∀ k ν Q → ⟦ ZZ ⟧^ k ν Q ≡ ⟦ CX-IZ-CX ⟧^ k ν Q
 ZZ-equiv = sound {p = ZZ} {q = CX-IZ-CX} ZZ≃CX-IZ-CX
 
--- Sanity check: the coefficient of Z⊗Z is exactly the clock ν(γ)/2^k.
+-- Sanity check: the coefficient of Z⊗Z is exactly the symbol γ (1·γ).
 ZZ-coef : coef ⟦ ZZ ⟧ (Z ∷ Z ∷ []) ≡ unit γ (+ 1 / 1)
 ZZ-coef = refl
