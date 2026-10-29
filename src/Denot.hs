@@ -1,11 +1,11 @@
--- | Verification oracle: compare compiled circuits to ideal unitaries (§Implementation).
+-- | Verification oracle: compare compiled circuits to ideal unitaries.
 --
 -- Delegates to scripts.semantics.denot, which implements the Hamiltonian and unitary
--- semantics from fig:sem:
+-- semantics:
 --   ⟦p⟧_H (hamiltonian) and ⟦p⟧_U = exp(-2πi ⟦p⟧_H) (ideal unitary).
 --
 -- compareToIdeal   -- ‖(⟦sch(p)/2^n⟧_U)^{2^n} - ⟦p⟧_U‖_F  (Trotter error)
--- compareIdeals    -- ‖⟦p1⟧_U - ⟦p2⟧_U‖_F  (dyadic approximation error, §Application)
+-- compareIdeals    -- ‖⟦p1⟧_U - ⟦p2⟧_U‖_F  (dyadic approximation error)
 module Denot where
 
 import GHC.Generics (Generic)

@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
-"""compare_ideals.py -- compare two processes' ideal unitaries (§Application).
+"""compare_ideals.py -- compare two processes' ideal unitaries.
 
 Protocol (stdin):  {"proc1": <Proc>, "proc2": <Proc>}
 Output (stdout):   {"frob": float}
 
-Used to measure dyadic approximation error (§Application, dyadic error table):
+Used to measure dyadic approximation error:
   ‖⟦p_k⟧_U - ⟦p_ref⟧_U‖_F  for varying dyadic precision levels k.
 
 Computes ‖exp(-2πi H1) - exp(-2πi H2)‖_F with no phase alignment,
 since the distance between two ideal unitaries is a genuine physical quantity.
-The unitary semantics ⟦·⟧_U is from fig:sem (implemented in scripts.semantics.denot).
+The unitary semantics ⟦·⟧_U is implemented in scripts.semantics.denot.
 """
 
 import sys

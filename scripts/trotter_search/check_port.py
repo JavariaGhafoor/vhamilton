@@ -1,4 +1,4 @@
-"""Check the Python search ports against the Haskell runs of Sec. 5
+"""Check the Python search ports against the Haskell ChemVQE runs
 (results/hamilton_vqe/08_search_method_comparison): k = 14, r = 7, n = 0."""
 import itertools
 import sys

@@ -1,11 +1,11 @@
-# Experiment run order: Hamilton paper -> Hamilton-VQE paper
+# Experiment run order: Hamilton, then Hamilton-VQE
 
 Run all commands from the project root with the Python environment activated.
-The canonical runners persist every paper-facing numerical result under `results/`.
+The canonical runners persist every recorded numerical result under `results/`.
 
-## A. Hamilton paper experiments, in paper order
+## A. Hamilton experiments
 
-Run all Hamilton-paper experiments:
+Run all Hamilton experiments:
 
 ```bash
 python -m scripts.experiments.run_hamilton
@@ -13,7 +13,7 @@ python -m scripts.experiments.run_hamilton
 
 Individual order:
 
-1. **ZX first-order Trotter convergence** — Hamilton §6, Fig. 6 and convergence table.
+1. **ZX first-order Trotter convergence**, with its convergence table.
    ```bash
    python -m scripts.experiments.run_hamilton --only 01_zx_trotter_convergence
    ```
@@ -23,19 +23,19 @@ Individual order:
    - `circuit_zx_n1.tex`
    - logs and exact commands
 
-2. **ZX schedule-order equivalence** — Hamilton §6, two admissible orderings at `n=1`.
+2. **ZX schedule-order equivalence**: two admissible orderings at `n=1`.
    ```bash
    python -m scripts.experiments.run_hamilton --only 02_zx_schedule_orderings
    ```
    Results: `results/hamilton/02_zx_schedule_orderings/table_zx_ord.tex`
 
-3. **Asymmetric ZXY schedule-order ranking** — Hamilton §6, six orderings at `n=1`.
+3. **Asymmetric ZXY schedule-order ranking**: six orderings at `n=1`.
    ```bash
    python -m scripts.experiments.run_hamilton --only 03_zxy_schedule_orderings
    ```
    Results: `results/hamilton/03_zxy_schedule_orderings/table_zxy_ord.tex`
 
-4. **Exact commuting ZZ interaction** — Hamilton §6.
+4. **Exact commuting ZZ interaction**
    ```bash
    python -m scripts.experiments.run_hamilton --only 04_zz_commuting_exact
    ```
@@ -43,7 +43,7 @@ Individual order:
    - `frob_zzparity.tex`
    - `circuit_zzparity_n0.tex`
 
-5. **DMANH+ dyadic representation error vs `k`** — Hamilton §7.
+5. **DMANH+ dyadic representation error vs `k`**
    ```bash
    python -m scripts.experiments.run_hamilton --only 05_chemistry_dyadic_error
    ```
@@ -51,7 +51,7 @@ Individual order:
    - `table_dyadic.tex`
    - decompositions for `k=3,4,6,8,10,12` and reference `k=20`
 
-6. **DMANH+ Trotter convergence vs `n` at `k=12`** — Hamilton §7.
+6. **DMANH+ Trotter convergence vs `n` at `k=12`**
    ```bash
    python -m scripts.experiments.run_hamilton --only 06_chemistry_trotter_convergence
    ```
@@ -59,7 +59,7 @@ Individual order:
    - `table_chem_trotter.tex`
    - saved `k=12` decomposition
 
-The values printed/cited in the Hamilton paper are therefore regenerated into the
+Every value is therefore regenerated into the
 same numbered result folders rather than existing only in terminal output.
 
 ---
@@ -78,20 +78,20 @@ Run the full Hamilton-VQE sequence:
 python -m scripts.experiments.run_hamilton_vqe
 ```
 
-1. **One-qubit `X+Z` calibration** — §2.1.
+1. **One-qubit `X+Z` calibration**
    ```bash
    python -m scripts.experiments.run_hamilton_vqe --only 01_one_qubit_calibration
    ```
    Expected checkpoint: `q*=5`, `E=-sqrt(2)`.
    Results: `results/hamilton_vqe/01_one_qubit_calibration/vqe_demo.log`
 
-2. **Compiler/regression validation** — §3.
+2. **Compiler/regression validation**
    ```bash
    python -m scripts.experiments.run_hamilton_vqe --only 02_compiler_regression
    ```
    Results: `results/hamilton_vqe/02_compiler_regression/regression.log`
 
-3. **DMANH+ chemistry target, Pauli decomposition, identity metadata** — §4, Table 1.
+3. **DMANH+ chemistry target, Pauli decomposition, identity metadata**
    ```bash
    python -m scripts.experiments.run_hamilton_vqe --only 03_chemistry_target_and_identity
    ```
@@ -100,14 +100,14 @@ python -m scripts.experiments.run_hamilton_vqe
    - `chemistry_target_metadata.json`
    - `dyadic_decomposition_k14.json`
 
-4. **Current ansatz has no active Trotter error** — §5.
+4. **Current ansatz has no active Trotter error**
    ```bash
    python -m scripts.experiments.run_hamilton_vqe --only 04_current_ansatz_trotter_invariance
    ```
    Runs `(k,r)=(10,3)` for `n=0,1,2` with exhaustive search and stores all logs plus
    `trotter_invariance_summary.csv`.
 
-5. **Pre-VQE precision selection** — §6.4, Table 2.
+5. **Pre-VQE precision selection**
    ```bash
    python -m scripts.experiments.run_hamilton_vqe --only 05_pre_vqe_precision_selection
    ```
@@ -115,9 +115,9 @@ python -m scripts.experiments.run_hamilton_vqe
    Results: `results/hamilton_vqe/05_pre_vqe_precision_selection/`
    - one full predictor JSON per target
    - one log per target
-   - `precision_selection_table.csv` containing the values copied into Table 2
+   - `precision_selection_table.csv` containing the selected precisions
 
-6. **Separate Hamiltonian precision `k` from parameter precision `r`** — §10.1.
+6. **Separate Hamiltonian precision `k` from parameter precision `r`**
    ```bash
    python -m scripts.experiments.run_hamilton_vqe --only 06_k_r_error_separation
    ```
@@ -126,7 +126,7 @@ python -m scripts.experiments.run_hamilton_vqe
    - raw compiler-backed logs
    - `k_r_separation_summary.csv`
 
-7. **Full exhaustive `(k,r)` benchmark sweep** — data behind Figs. 1, 2, 7 and §10.6.
+7. **Full exhaustive `(k,r)` benchmark sweep**: data for the error figures.
    ```bash
    python -m scripts.experiments.run_hamilton_vqe --only 07_exhaustive_k_r_sweep
    ```
@@ -139,7 +139,7 @@ python -m scripts.experiments.run_hamilton_vqe
    - `total_error_heatmap.png`
    - `sweep.log`
 
-8. **Search-method comparison at `(k,r)=(14,7)`** — §10.2, Table 3, Fig. 3.
+8. **Search-method comparison at `(k,r)=(14,7)`**
    ```bash
    python -m scripts.experiments.run_hamilton_vqe --only 08_search_method_comparison
    ```
@@ -156,7 +156,7 @@ python -m scripts.experiments.run_hamilton_vqe
    ```
    Results: `results/hamilton_vqe/09_harmonic_fit_conditioning/harmonic_fit_conditioning.json`
 
-10. **Representative analytic-direct runs** — §10.3, Table 4.
+10. **Representative analytic-direct runs**
     ```bash
     python -m scripts.experiments.run_hamilton_vqe --only 10_analytic_direct_representative
     ```
@@ -165,7 +165,7 @@ python -m scripts.experiments.run_hamilton_vqe
     - three compiler-backed logs
     - `analytic_direct_representative.csv`
 
-11. **Systematic analytic-direct vs exhaustive validation** — §10.4, Table 5, Fig. 4.
+11. **Systematic analytic-direct vs exhaustive validation**
     ```bash
     python -m scripts.experiments.run_hamilton_vqe --only 11_analytic_direct_global_validation
     ```
@@ -176,7 +176,7 @@ python -m scripts.experiments.run_hamilton_vqe
     - `direct_validation_heatmap.png`
     - `validation.log`
 
-12. **Observed direct-search query/sweep scaling** — §10.5, Figs. 5 and 6.
+12. **Observed direct-search query/sweep scaling**
     ```bash
     python -m scripts.experiments.run_hamilton_vqe --only 12_analytic_direct_precision_scaling
     ```

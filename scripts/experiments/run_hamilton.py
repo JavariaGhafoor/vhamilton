@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Run the numerical experiments appearing in the Hamilton paper, in paper order.
+"""Run the numerical experiments of the Hamilton calculus, in a fixed order.
 
-Every result used in the paper is written below results/hamilton/<experiment>/.
+Every result is written below results/hamilton/<experiment>/.
 Run from the project root:
 
     python -m scripts.experiments.run_hamilton
@@ -56,7 +56,7 @@ def run_one(name: str, base: Path) -> None:
         run_logged(["cabal", "run", "gen-circuits", "--", str(out), "zz"], out,
                    log_name="zz_circuit.log", command_name="COMMAND_circuit.txt")
     elif name == "05_chemistry_dyadic_error":
-        # These are exactly the precisions used in the Hamilton-paper table; k=20 is its reference.
+        # These are the precisions of the dyadic-error table; k=20 is its reference.
         for k in (3, 4, 6, 8, 10, 12, 20):
             save_decomp(k, out)
         run_logged(["cabal", "run", "gen-tables", "--", str(out), "dyadic-error"], out)
@@ -77,7 +77,7 @@ def main() -> None:
     for name in chosen:
         print(f"\n=== Hamilton experiment: {name} ===")
         run_one(name, args.results_dir)
-    print(f"\nHamilton-paper results saved under: {args.results_dir}")
+    print(f"\nHamilton results saved under: {args.results_dir}")
 
 
 if __name__ == "__main__":

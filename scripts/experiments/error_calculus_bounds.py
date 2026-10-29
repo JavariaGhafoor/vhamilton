@@ -1,5 +1,5 @@
 """Error calculus for the DMANH+ chemistry VQE: measured errors against the
-a priori bounds of the paper (Sec. 7.4).
+a priori error bounds.
 
   delta_H(k)   = E0(H_k) - E0(H_bar)           vs  Weyl bound  M 2^-(k+1)
   delta_r(k,r) = min_grid E_{H_k} - E0(H_k)     vs  first order 2 pi p ||H_k|| 2^-r

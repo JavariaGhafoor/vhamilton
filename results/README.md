@@ -1,6 +1,6 @@
 # Results
 
-Paper-facing outputs are split by document and numbered in document order:
+Outputs are split by experiment suite and numbered in run order:
 
 ```text
 results/
@@ -27,5 +27,5 @@ results/
 ```
 
 Use the runners in `scripts/experiments/`. Each runner stores the exact command,
-raw log, and structured/plot output needed by the corresponding paper result.
+raw log, and structured/plot output needed by the corresponding result.
 See `docs/EXPERIMENT_RUN_ORDER.md`.

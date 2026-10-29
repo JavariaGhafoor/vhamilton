@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Run the experiments/results appearing in the Hamilton-VQE document, in document order.
+"""Run the Hamilton-VQE experiments, in a fixed order.
 
-All values copied into the document are persisted below
+All values are persisted below
 results/hamilton_vqe/<experiment>/ rather than existing only in terminal output.
 
 Run everything:
@@ -282,7 +282,7 @@ def main() -> None:
     for name in chosen:
         print(f"\n=== Hamilton-VQE experiment: {name} ===")
         run_one(name, args.results_dir)
-    print(f"\nHamilton-VQE document results saved under: {args.results_dir}")
+    print(f"\nHamilton-VQE results saved under: {args.results_dir}")
 
 
 if __name__ == "__main__":

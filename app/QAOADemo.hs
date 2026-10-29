@@ -11,7 +11,7 @@
 --   mixer(β)  = β XI ∥ β IX          one shared clock on both fields
 --
 -- At search precision r the valuation is rho(α) = q/2^r, so 'DeltaParam 0 α'
--- under rho is the paper's δ_r^α with ν(α) = q.  Since e^{-2πiγZZ} and
+-- under rho is the open clock δ_r^α with ν(α) = q.  Since e^{-2πiγZZ} and
 -- e^{-2πiβ(XI+IX)} are periodic (up to global phase) with period 1/2 in
 -- γ and β, the grid q ∈ {0,…,2^(r-1)-1} covers one full period.
 --

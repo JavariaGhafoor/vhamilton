@@ -1,9 +1,9 @@
--- | Building blocks and small examples (§Examples, §Implementation).
+-- | Building blocks and small examples.
 --
--- Building blocks (§Examples):
+-- Building blocks:
 --   zK / xK / yK   -- single-qubit Pauli generators at precision k; the basic
---                     Hamilton processes introduced in §Examples
--- Multi-term processes (§Examples, used in ordering/convergence tables):
+--                     Hamilton processes
+-- Multi-term processes (used in ordering/convergence tables):
 --   zxK            -- Z ∥ X, asymmetric 2-term example
 --   zxyK           -- Z ∥ X ∥ Y, 3-term example; 6 schedule orderings
 --   zzParity       -- ZZ, commuting 2-qubit term (Trotter error = 0)
@@ -122,7 +122,6 @@ conj u d = Atom (Conj u (Bare d))
 --------------------------------------------------------------------------------
 -- Building blocks
 
--- §§ [building-blocks]
 zK :: Natural -> Proc
 zK k = act (Id ⊕ delta k)
 
@@ -131,7 +130,6 @@ xK k = conj H (Id ⊕ delta k)
 
 yK :: Natural -> Proc
 yK k = conj (S · H) (Id ⊕ delta k)
--- §§ [/building-blocks]
 
 xDagK :: Natural -> Proc
 xDagK k = conj H (Id ⊕ negDelta k)
@@ -149,10 +147,8 @@ diag2 a b c d = act ((f a ⊕ f b) ⊕ (f c ⊕ f d))
 czLike :: Natural -> Proc
 czLike k = diag2 0 0 0 k
 
--- §§ [zzParity]
 zzParity :: Natural -> Proc
 zzParity k = diag2 0 k k 0
--- §§ [/zzParity]
 
 -- | X-rotation on qubit 0, identity on qubit 1.
 --   Constructed by conjugating a 2-qubit diagonal by H⊗I.
@@ -163,10 +159,8 @@ xLow2 k =
 --------------------------------------------------------------------------------
 -- Small examples
 
--- §§ [zxK]
 zxK :: Natural -> Natural -> Proc
 zxK kz kx = zK kz ∥ xK kx
--- §§ [/zxK]
 
 testZX :: Natural -> IO ()
 testZX n = runAndCompare True "test.qasm" n (zxK 2 3)
@@ -174,10 +168,8 @@ testZX n = runAndCompare True "test.qasm" n (zxK 2 3)
 testZXPerms :: Natural -> IO ()
 testZXPerms n = comparePerms "test.qasm" n (zxK 2 3)
 
--- §§ [zxyK]
 zxyK :: Proc
 zxyK = zK 1 ∥ xK 2 ∥ yK 3
--- §§ [/zxyK]
 
 testZXYPerms :: Natural -> IO ()
 testZXYPerms n = comparePerms "test.qasm" n zxyK

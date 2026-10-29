@@ -8,7 +8,7 @@ each level n = 0…4.
 Reproduce:
 
     cabal run trotter-vqe-demo -- 4 0 1 2 3 4                 # summary.log, trotter_grid_r4_n*.csv
-    python3 scripts/paper/trotter_vs_exact.py results/trotter_vqe/trotter_grid_r4_n*.csv
+    python3 scripts/figures/trotter_vs_exact.py results/trotter_vqe/trotter_grid_r4_n*.csv
                                                              # trotter_vs_exact.txt
 
 ## The program's own optimum

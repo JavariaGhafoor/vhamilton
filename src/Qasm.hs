@@ -1,4 +1,4 @@
--- | Emit QCircuit as OpenQASM 3 (§Implementation, fig:circuits).
+-- | Emit QCircuit as OpenQASM 3.
 --
 -- Final stage of the compilation pipeline:  QCircuit → OpenQASM 3 string.
 -- Multi-qubit QDiagonalAt gates are lowered to elementary gates by

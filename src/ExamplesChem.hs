@@ -1,19 +1,19 @@
--- | DMANH+ hydrogen-bond dynamics (§Application: Hydrogen-Bond Dynamics).
+-- | DMANH+ hydrogen-bond dynamics.
 --
--- Implements the construction described in §Application:
---   diagCore   -- diagonal core of a weighted Pauli string (fig:sem, BareAction layer)
+-- Implements the following construction:
+--   diagCore   -- diagonal core of a weighted Pauli string (BareAction layer)
 --   basisCliff -- Clifford rotating all-Z diagonal into Pauli basis (H for X, H;S for Y)
---   chemTerm   -- one Pauli term as a Hamilton Atom (§Application)
---   chemProc   -- full DMANH+ Hamiltonian as a parallel composition (§Application)
+--   chemTerm   -- one Pauli term as a Hamilton Atom
+--   chemProc   -- full DMANH+ Hamiltonian as a parallel composition
 --
--- Input comes from scripts.chemistry.chem_decompose (§Application), which Pauli-decomposes
+-- Input comes from scripts.chemistry.chem_decompose, which Pauli-decomposes
 -- the published matrix and rounds each coefficient to a dyadic level.
 module ExamplesChem where
 
 -- | Chemistry application: the DMANH+ hydrogen-bond Hamiltonian.
 --
 -- The Hamiltonian lives in exactly one place: scripts.chemistry.chem_decompose, which holds
--- the published matrix (Richerme et al., arXiv:2204.08571), Pauli-decomposes
+-- the published matrix (Richerme et al., J. Phys. Chem. Lett. 14, 7256, 2023), Pauli-decomposes
 -- it, and rounds each coefficient to a chosen dyadic level. This module fetches
 -- that decomposition at runtime (mirroring how Denot/Qasm shell out to their
 -- Python helpers) and assembles the corresponding S_k process.
@@ -163,7 +163,6 @@ basisCliff [p, q] =
     orI = maybe I id
 basisCliff _ = Nothing
 
--- §§ [chem-assemble]
 pauliCoreProc :: String -> BareAction -> Proc
 pauliCoreProc lbl core =
   case basisCliff lbl of
@@ -206,7 +205,6 @@ identityDyadic d =
 chemProcWithIdentity :: ChemDecomp -> Proc
 chemProcWithIdentity d =
   chemTerm (ChemTerm "II" (cdIdentityNum d) (cdIdentityK d)) ∥ chemProc d
--- §§ [/chem-assemble]
 
 --------------------------------------------------------------------------------
 -- Runners

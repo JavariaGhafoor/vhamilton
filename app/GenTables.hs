@@ -1,15 +1,15 @@
--- | Generate LaTeX table fragments (§Examples tables and §Application tables).
+-- | Generate LaTeX table fragments for the example and application tables.
 --
 -- Run from the code/ directory:
 --   cabal run gen-tables -- <output-dir>
 -- Writes one .tex file per table into <output-dir>.
 --
--- genZXConv      -- ZX Trotter convergence table (§Examples)
--- genZXOrd       -- ZX schedule orderings (§Examples, Rule R1)
--- genZXYOrd      -- ZXY schedule orderings (§Examples, Rule R1)
--- genZZParity    -- exact result for commuting ZZ (§Examples)
--- genChemTrotter -- DMANH+ Trotter convergence sweep (§Application)
--- genDyadicError -- dyadic approximation error vs. level k (§Application)
+-- genZXConv      -- ZX Trotter convergence table
+-- genZXOrd       -- ZX schedule orderings (Rule R1)
+-- genZXYOrd      -- ZXY schedule orderings (Rule R1)
+-- genZZParity    -- exact result for commuting ZZ
+-- genChemTrotter -- DMANH+ Trotter convergence sweep
+-- genDyadicError -- dyadic approximation error vs. level k
 module Main where
 
 import Numeric.Natural (Natural)

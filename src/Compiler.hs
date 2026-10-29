@@ -1,11 +1,11 @@
--- | Compilation pipeline from processes to circuits (§Implementation, fig:circuits).
+-- | Compilation pipeline from processes to circuits.
 --
 --   Proc  --(canonicalSchedule)-->  Schedule  --(this module)-->  QCircuit
 --
 -- compileClifford  -- Clifford u to gate sequence (offset-aware, structural)
--- diagonalAngles   -- phase angles of ⟦d⟧_U = exp(-2πi ⟦d⟧_H) for bare actions (fig:sem)
--- compileAction    -- action a to QCircuit, applying conjugation for Conj (fig:sem)
--- compileTrotter   -- Trotter approximation: (⟦sch(p)/2^n⟧_U)^{2^n} → ⟦p⟧_U (eq:trotter)
+-- diagonalAngles   -- phase angles of ⟦d⟧_U = exp(-2πi ⟦d⟧_H) for bare actions
+-- compileAction    -- action a to QCircuit, applying conjugation for Conj
+-- compileTrotter   -- Trotter approximation: (⟦sch(p)/2^n⟧_U)^{2^n} → ⟦p⟧_U
 module Compiler where
 
 import Numeric.Natural (Natural)
@@ -56,7 +56,6 @@ phaseAngle k =
   -(2 * pi) /
   fromIntegral (2 ^ (fromIntegral k :: Int) :: Integer)
 
--- §§ [diag-angles]
 diagonalAnglesWith :: Valuation -> BareAction -> [Double]
 diagonalAnglesWith rho = \case
   Id                 -> [0]
@@ -70,7 +69,6 @@ diagonalAnglesWith rho = \case
 -- Closed Hamilton programs need no valuation; open VHamilton programs do.
 diagonalAngles :: BareAction -> [Double]
 diagonalAngles = diagonalAnglesWith M.empty
--- §§ [/diag-angles]
 
 --------------------------------------------------------------------------------
 -- Action -> QCircuit
@@ -105,7 +103,6 @@ compileScheduleWith rho = foldMap (compileActionWith rho 0)
 compileSchedule :: Schedule -> QCircuit
 compileSchedule = compileScheduleWith M.empty
 
--- §§ [compile-trotter]
 compileTrotterWith :: Valuation -> Natural -> Proc -> QCircuit
 compileTrotterWith rho n proc =
   mconcat (replicate reps step)
@@ -115,7 +112,6 @@ compileTrotterWith rho n proc =
 
 compileTrotter :: Natural -> Proc -> QCircuit
 compileTrotter = compileTrotterWith M.empty
--- §§ [/compile-trotter]
 
 -- | Compile an arbitrary schedule repeated 2^n times.
 compileScheduleN :: Natural -> Schedule -> QCircuit

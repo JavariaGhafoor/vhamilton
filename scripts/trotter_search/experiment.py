@@ -1,4 +1,4 @@
-"""Search methods of Sec. 5 on a Trotterized ansatz, and search in the Trotter
+"""The chemistry search methods on a Trotterized ansatz, and search in the Trotter
 dimension.
 
 Usage: python3 -m scripts.trotter_search.experiment [controlled|pair]
@@ -12,14 +12,14 @@ which spans the same three Paulis as the default example below.
 
 Default example "controlled" (results/trotter_search):
 
-Ansatz: the three generators of the Sec. 5 ansatz written as ONE parallel
+Ansatz: the three generators of the chemistry ansatz (app/ChemVQE.hs) written as ONE parallel
 VHamilton block (see app/TrotterChemEnergies.hs),
 
     G(α) = α1 YI ∥ α2 (IY + ZY)/2 ∥ α3 (IY − ZY)/2,
 
 on the DMANH+ target at k = 14, searched at r = 7 (2^18 valuations).  The
 program denotes e^{-2πi G(α)}; level n compiles it as 2^n repetitions of its
-schedule.  At n = 0 that is exactly the sequential Sec. 5 circuit.
+schedule.  At n = 0 that is exactly the sequential ChemVQE circuit.
 
 Writes results/trotter_search/{landscapes,methods,certify,continuation}.csv
 and prints a log.

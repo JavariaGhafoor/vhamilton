@@ -3,7 +3,7 @@ Trotter-aware frequency budget.
 
 Every mode talks to the landscape only through an Oracle, which counts each
 distinct energy query exactly as the Haskell code does (refine mode re-queries
-inherited centres; the other modes cache).  With n = 0 and the Sec. 5 ansatz
+inherited centres; the other modes cache).  With n = 0 and the ChemVQE ansatz
 these ports reproduce the Haskell query counts 315 / 189 / 128 / 38 and the
 optimum q = (28, 30, 19); see check_port.py.
 """

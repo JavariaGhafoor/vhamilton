@@ -41,7 +41,7 @@ uniformly better (it loses where clocks are large); near the optimum (small
 α1, α2) its error is 2× (n = 2) to 8× (n = 4) smaller, and it reaches the
 program's optimum at n = 2 instead of n = 4.
 
-**Sec. 5 methods per level.**  Refine and coordinate recover each level's
+**The ChemVQE search methods per level.**  Refine and coordinate recover each level's
 optimum (≈ 290 and ≈ 165 queries for n ≥ 1).  At n = 0 they disagree with
 exhaustive search: they stop at (28, 5, 25), 2.1 mHa off, while the n = 0
 optimum is the 33 mHa trap.

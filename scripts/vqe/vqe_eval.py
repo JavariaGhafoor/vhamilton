@@ -18,7 +18,7 @@ import numpy as np
 from qiskit.qasm3 import loads
 from qiskit.quantum_info import Statevector
 
-# Reuse the Hamiltonian denotation already used by the paper implementation.
+# Reuse the Hamiltonian denotation already used by the Hamilton implementation.
 from scripts.semantics.denot import hamiltonian
 
 

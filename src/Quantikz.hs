@@ -1,6 +1,6 @@
--- | Render a QCircuit as a quantikz LaTeX environment (§Implementation, fig:circuits).
+-- | Render a QCircuit as a quantikz LaTeX environment.
 --
--- Generates the circuit diagrams shown in fig:circuits.
+-- Generates circuit diagrams.
 -- 1-qubit QDiagonalAt [phi0, phi1] is rendered as P(phi1 - phi0);
 -- global phase (phi0) is silently dropped.
 -- n-qubit QDiagonalAt (n > 1) is rendered as a named box gate.

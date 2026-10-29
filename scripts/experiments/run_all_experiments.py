@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run Hamilton-paper experiments first, then Hamilton-VQE experiments."""
+"""Run the Hamilton experiments first, then the Hamilton-VQE experiments."""
 from scripts.experiments.run_hamilton import main as run_hamilton
 from scripts.experiments.run_hamilton_vqe import main as run_vqe
 

@@ -74,7 +74,7 @@ Only the **bare-action grammar** is extended:
 +     | δ_k^{α_j} | -δ_k^{α_j} | d ⊕ d
 ```
 
-The Clifford, action, and process grammars from Section 1 are unchanged.
+The Clifford, action, and process grammars from Section 1 above are unchanged.
 `δ_k^j` (fixed integer `j`) belongs to **Hamilton**, whereas
 `δ_k^{α_j}` and `-δ_k^{α_j}` (symbolic parameter name `α_j`) are the **only
 new VHamilton primitives**. Neither a `Scalar` type nor a `scale` operation
@@ -175,7 +175,7 @@ src/VQE.hs           external VQE ansatz/optimizer layer
 test/                Haskell/Python regression tests
 scripts/             independent Python semantics, chemistry, VQE, experiments
 docs/                language, experiments, chemistry and optimization guides
-results/             paper-facing recorded experiment outputs
+results/             recorded experiment outputs
 pih.cabal            Cabal project definition
 requirements.txt     Python requirements
 ```
@@ -219,4 +219,4 @@ Haskell compilation and end-to-end circuit-backed VQE execution require
 verification in a configured environment. This documentation revision does
 not claim additional successful end-to-end runs.
 
-See `docs/PAPER_FIGURES.md` for the command behind every figure and number in the PLanQC 2027 abstract.
+See `docs/EXPERIMENT_INDEX.md` for the command behind each recorded figure and number.

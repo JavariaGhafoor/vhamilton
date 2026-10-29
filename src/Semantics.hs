@@ -1,14 +1,14 @@
--- | Halving, schedule extraction, and schedule halving (§Processes).
+-- | Halving, schedule extraction, and schedule halving.
 --
--- Implements Definitions 2, 3, and 4 from §Processes, and Rule R1 from §4.1:
---   seg0 / seg1 / segProc  -- n-way successive halving p / 2^n        (Definition 2)
---   sch                    -- schedule of a process: sch(p)            (Definition 3)
---   segSchedule            -- schedule halving: [a] / 2^n              (Definition 4)
---   canonicalSchedule      -- sch(p) / 2^n, Definitions 3 and 4 composed
+-- Implements halving, schedule extraction and schedule halving, and Rule R1:
+--   seg0 / seg1 / segProc  -- n-way successive halving p / 2^n
+--   sch                    -- schedule of a process: sch(p)
+--   segSchedule            -- schedule halving: [a] / 2^n
+--   canonicalSchedule      -- sch(p) / 2^n, extraction and halving composed
 --   schedulePerms          -- all permutations of sch(p) / 2^n         (Rule R1)
 --
 -- The canonical schedule repeated 2^n times is the Trotter circuit compiled
--- by Compiler.compileTrotter (§Implementation, eq:trotter).
+-- by Compiler.compileTrotter.
 module Semantics where
 
 import Numeric.Natural (Natural)
@@ -17,7 +17,7 @@ import Data.List (permutations)
 import Syntax (Proc(..), BareAction(..), Action(..), Schedule)
 
 --------------------------------------------------------------------------------
--- n-way successive halving: p / 2^n  (Definition 2)
+-- n-way successive halving: p / 2^n
 --
 --   id / 2^n          = id
 --   (±)δ_k^(alpha) / 2^n = (±)δ_{k+n}^(alpha), and likewise for Hamilton generators
@@ -43,7 +43,7 @@ segProc (Atom a)  n = Atom (seg1 a n)
 segProc (p :∥: q) n = segProc p n :∥: segProc q n
 
 --------------------------------------------------------------------------------
--- Schedule of a process  (Definition 3)
+-- Schedule of a process
 --
 --   sch(a)     = [a]
 --   sch(p ∥ q) = sch(p) ++ sch(q)
@@ -53,7 +53,7 @@ sch (Atom a)  = [a]
 sch (p :∥: q) = sch p ++ sch q
 
 --------------------------------------------------------------------------------
--- Schedule halving  (Definition 4)
+-- Schedule halving
 --
 --   [a_1, ..., a_m] / 2^n = [a_1 / 2^n, ..., a_m / 2^n]
 
@@ -71,7 +71,7 @@ canonicalSchedule p n = segSchedule (sch p) n
 --------------------------------------------------------------------------------
 -- Schedule families
 --
--- Rule (R1) from the paper: any permutation of a canonical schedule is
+-- Rule (R1) of Hamilton's equational theory: any permutation of a canonical schedule is
 -- an equivalent schedule. This gives the brute-force family of O(m!)
 -- schedules for a process with m parallel branches.
 

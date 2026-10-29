@@ -1,4 +1,4 @@
--- | Generate quantikz circuit diagrams (§Implementation, fig:circuits).
+-- | Generate quantikz circuit diagrams.
 --
 -- Run from the code/ directory:
 --   cabal run gen-circuits -- <output-dir>

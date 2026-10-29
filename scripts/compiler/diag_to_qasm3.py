@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-diag_to_qasm3.py — lower diagonal unitary gates to elementary gates (§Implementation).
+diag_to_qasm3.py — lower diagonal unitary gates to elementary gates.
 
-Part of the compilation pipeline (fig:circuits): decomposes QDiagonalAt gates
+Part of the compilation pipeline: decomposes QDiagonalAt gates
 emitted by Qasm.hs into {h, s, x, cx, swap, p, cp} via Qiskit DiagonalGate.
 
 Reads JSON from stdin:

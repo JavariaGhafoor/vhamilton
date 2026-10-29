@@ -86,7 +86,7 @@ expression, negation-expression constructor, or new sequencing operator.
 
 The Haskell constructors in `src/Syntax.hs` are:
 
-| Origin | Paper syntax | Haskell constructor |
+| Origin | Mathematical syntax | Haskell constructor |
 |---|---|---|
 | Hamilton | `id` | `Id` |
 | Hamilton | `δ_k` | `Delta k` |

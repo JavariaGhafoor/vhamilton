@@ -7,14 +7,14 @@ Code: `scripts/trotter_search/` (driver `experiment.py`), Haskell check
 Reproduce:
 
 ```
-python3 -m scripts.trotter_search.check_port          # ports vs Sec. 5 Haskell runs
+python3 -m scripts.trotter_search.check_port          # ports vs the Haskell ChemVQE runs
 python3 -m scripts.trotter_search.experiment > results/trotter_search/run.log
 python3 -m scripts.trotter_search.validate_against_haskell <trotter-chem-energies binary>
 ```
 
 ## Setup
 
-Same target as Sec. 5 (DMANH+ upper block, k = 14, r = 7, 2^18 valuations),
+Same target as the ChemVQE experiments (DMANH+ upper block, k = 14, r = 7, 2^18 valuations),
 but the three generators are written as **one parallel block**
 
     G(α) = α1 YI ∥ α2 (IY + ZY)/2 ∥ α3 (IY − ZY)/2 .
@@ -22,7 +22,7 @@ but the three generators are written as **one parallel block**
 The program denotes e^{-2πi G(α)}.  YI anticommutes with ZY, so the compiled
 circuit depends on the Trotter level n: 2^n repetitions of the 5-atom
 schedule, 5·2^n atoms per energy query.  At n = 0 the schedule runs the three
-generators one after another, which is *exactly* the Sec. 5 sequential
+generators one after another, which is *exactly* the sequential ChemVQE
 ansatz.  `canon` is Hamilton's compiler; `sym` alternates the schedule and its
 reverse between repetitions (same atoms, same count, symmetric product).
 
@@ -55,15 +55,15 @@ numbers below are from the ports, so they compare like with like.
 | 4 | sym | (28,22,16) | 0 | 0.04 |
 | 5 | sym | (28,22,16) | 0 | 0.01 |
 
-* The Sec. 5 answer (28,30,19) is the optimum of the n = 0 circuit; as a
+* The ChemVQE answer (28,30,19) is the optimum of the n = 0 circuit; as a
   valuation of the parallel program it is 2.1 mHa off, more than chemical
   accuracy (1.6 mHa).
 * At canon n = 1, 2 the compiled optimum lies 0.005 mHa *below* anything the
-  program denotes (the Sec. 4 effect, small here).
+  program denotes (the effect seen in `trotter_vqe`, small here).
 * With the symmetric schedule the landscape error falls ≈4× per level instead
   of ≈2×, and the program's optimum is reached at n = 3 instead of n = 5.
 
-## 2. Sec. 5 methods at a fixed level
+## 2. The ChemVQE search methods at a fixed level
 
 Refine (zoom) and coordinate search recover the exhaustive optimum of E_n at
 every level and schedule, with an almost level-independent query count

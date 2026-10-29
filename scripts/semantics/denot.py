@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-denot.py — Hamiltonian and unitary semantics of Hamilton processes (§Semantics, fig:sem).
+denot.py — Hamiltonian and unitary semantics of Hamilton processes.
 
 Reads JSON from stdin:
   {"proc": <Proc>, "qasm": "<OpenQASM 3 string>"}
@@ -8,7 +8,7 @@ Reads JSON from stdin:
 Writes JSON to stdout:
   {"frob_aligned": float, "ideal": [[[re, im]]], "dim": int}
 
-Implements Figure fig:sem:
+Implements the semantics:
   hamiltonian0  -- ⟦d⟧_H  for bare actions (diagonal matrices):
     ⟦id⟧_H       =  0
     ⟦δ_k^j⟧_H    = j/2^k

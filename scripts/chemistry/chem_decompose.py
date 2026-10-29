@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-chem_decompose.py — Pauli-decompose the DMANH+ Hamiltonian block (§Application).
+chem_decompose.py — Pauli-decompose the DMANH+ Hamiltonian block.
 
 Reads the published DMANH+ block, Pauli-decomposes it, scales the Hamiltonian,
 and rounds every Pauli coefficient to a dyadic rational at level k.

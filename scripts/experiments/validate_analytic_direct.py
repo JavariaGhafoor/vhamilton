@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 """Independent matrix-semantic validation for the noiseless Hamilton VQE study.
 
-This script reproduces the two extra experiment tables used in the comprehensive
-writeup:
+This script produces two experiment tables:
 
   1. direct_validation_matrix.csv
      Compare analytic-direct against the exact exhaustive discrete optimum for
@@ -300,7 +299,7 @@ def analytic_direct(Hk: np.ndarray, r: int, max_sweeps: int = 12) -> DirectResul
 
 
 # -----------------------------------------------------------------------------
-# Experiments used in the writeup
+# Experiments
 # -----------------------------------------------------------------------------
 
 VALIDATION_FIELDS = [

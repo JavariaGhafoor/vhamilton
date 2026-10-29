@@ -63,7 +63,7 @@ daggerC = \case
   u :⊗: v -> daggerC u ⊗ daggerC v
   u :⋅: v -> daggerC v · daggerC u
 
--- | Matrix dimension of a Clifford (paper types: I:2, H:2, S:2, CX:4,
+-- | Matrix dimension of a Clifford (types: I:2, H:2, S:2, CX:4,
 -- SWAP:4; u⊗v:nm; u·v:n with n=m enforced).
 dimClifford :: Clifford -> Natural
 dimClifford = \case
@@ -191,11 +191,9 @@ instance A.ToJSON Action where
 
 infixr 4 :∥:
 
--- §§ [proc-data]
 data Proc
   = Atom Action
   | Proc :∥: Proc
--- §§ [/proc-data]
   deriving (Eq, Ord, Show, Generic)
 
 infixr 4 ∥

@@ -22,7 +22,7 @@ Bounds known from k before running anything:
 | 20 | 4.6e-7 | 4.8e-7 | 2.3e-6 | 9.9e-5 | 5.4e-6 | 1.1e-5 |
 
 (all even k from 4 to 20 in `run.log`).  At k = 14, the precision used in the
-Sec. 5 experiments, the ground energy moves by 4.4e-4 mHa, far below chemical
+chemistry VQE experiments, the ground energy moves by 4.4e-4 mHa, far below chemical
 accuracy (1.6 mHa); this matches `hamilton_vqe/05_pre_vqe_precision_selection`.
 
 ## B. Qiskit: radians as doubles, approximations chosen by the transpiler

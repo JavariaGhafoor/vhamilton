@@ -1,6 +1,6 @@
 """Dyadic coefficients (VHamilton) versus floating-point angles (Qiskit).
 
-Part A: the chemistry target of Sec. 5 (DMANH+ upper block, scaled as in
+Part A: the chemistry target (DMANH+ upper block, scaled as in
 chem_decompose.py), with every Pauli coefficient rounded to k bits.  For each k
 we report the measured coefficient, ground-energy and unit-time unitary errors
 next to the bounds that follow from k alone:

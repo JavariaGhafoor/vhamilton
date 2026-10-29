@@ -49,8 +49,8 @@
 
 - `scripts/experiments/chem_vqe_sweep.py` — fast matrix-semantic k/r sweep.
 - `scripts/experiments/validate_analytic_direct.py` — global-optimum validation matrix and query-scaling experiments.
-- `results/hamilton/` — Hamilton-paper outputs, numbered in paper order.
-- `results/hamilton_vqe/` — Hamilton-VQE outputs, numbered in document order.
+- `results/hamilton/` — Hamilton outputs, numbered in run order.
+- `results/hamilton_vqe/` — Hamilton-VQE outputs, numbered in run order.
 
 ## Documentation
 
@@ -62,10 +62,10 @@
 - `docs/optimization/CHEM_VQE_SWEEP.md` — k/r sweep experiment.
 - `docs/testing/REGRESSION_TESTS.md` — compiler/semantics regression suite.
 
-## Document experiment runners
+## Experiment runners
 
-- `scripts/experiments/run_hamilton.py` — reproduces the numerical/figure artifacts from the Hamilton paper in paper order and writes them to `results/hamilton/`.
-- `scripts/experiments/run_hamilton_vqe.py` — reproduces the experiments/results from the Hamilton-VQE writeup in document order and writes them to `results/hamilton_vqe/`.
+- `scripts/experiments/run_hamilton.py` — reproduces the Hamilton numerical and figure artifacts in run order and writes them to `results/hamilton/`.
+- `scripts/experiments/run_hamilton_vqe.py` — reproduces the Hamilton-VQE experiments in run order and writes them to `results/hamilton_vqe/`.
 - `scripts/experiments/run_all_experiments.py` — runs the Hamilton sequence first and then the Hamilton-VQE sequence.
 - `scripts/experiments/_experiment_utils.py` — shared logging, command-recording, CSV and compiler-output parsing helpers.
 - `docs/EXPERIMENT_RUN_ORDER.md` — canonical ordered checklist with commands and result destinations.
