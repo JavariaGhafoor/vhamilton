@@ -1,0 +1,28 @@
+# Rerun of the regression suite (claude/relaxed-keller-gnj94y), GHC 9.4.7, built with
+# ghc -isrc test/Regression.hs; Text.show replaced by Text.pack . show for text < 2.1.2.
+Hamilton compiler/VQE regression tests
+
+PASS  compiled X/8  (phase-aligned Frobenius=4.191e-16)
+PASS  compiled Y/8  (phase-aligned Frobenius=4.191e-16)
+PASS  compiled Z/8  (phase-aligned Frobenius=1.570e-16)
+PASS  compiled XI/8  (phase-aligned Frobenius=5.927e-16)
+PASS  compiled IX/8  (phase-aligned Frobenius=5.927e-16)
+PASS  compiled XY/8  (phase-aligned Frobenius=1.164e-15)
+PASS  compiled YX/8  (phase-aligned Frobenius=1.164e-15)
+PASS  compiled ZZ/8  (phase-aligned Frobenius=2.220e-16)
+PASS  label XI  (Hamiltonian Frobenius=5.579e-17)
+PASS  label IX  (Hamiltonian Frobenius=5.579e-17)
+PASS  label XY  (Hamiltonian Frobenius=1.110e-16)
+PASS  label YX  (Hamiltonian Frobenius=1.110e-16)
+PASS  label ZZ  (Hamiltonian Frobenius=0.000e0)
+PASS  parameter names
+PASS  halving positive action
+PASS  halving negative action
+PASS  positive parameter phase
+PASS  negative parameter phase
+PASS  open VHamilton compiled vs ideal
+PASS  VQE best q
+PASS  VQE best energy
+PASS  VQE exact ground
+
+All regression tests passed.

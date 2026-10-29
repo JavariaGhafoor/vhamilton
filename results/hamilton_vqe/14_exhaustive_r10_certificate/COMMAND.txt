@@ -1,0 +1,1 @@
+python -m scripts.experiments.exhaustive_grid_certificate --k 14 --r 10

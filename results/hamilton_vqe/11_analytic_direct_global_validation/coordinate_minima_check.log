@@ -1,0 +1,10 @@
+k= 3 r=6 stop=(12, 15, 6) optimum=(11, 15, 5) excess=0.050511 mHa best single-clock change=+0.025084 mHa  coordinatewise minimum
+k= 4 r=4 stop=(4, 0, 3) optimum=(3, 4, 2) excess=0.476405 mHa best single-clock change=+0.000000 mHa  coordinatewise minimum
+k= 6 r=4 stop=(4, 0, 3) optimum=(3, 4, 2) excess=0.307970 mHa best single-clock change=+0.000000 mHa  coordinatewise minimum
+k= 7 r=4 stop=(4, 0, 3) optimum=(3, 4, 2) excess=0.248420 mHa best single-clock change=+0.000000 mHa  coordinatewise minimum
+k= 8 r=4 stop=(4, 0, 3) optimum=(3, 4, 2) excess=0.159094 mHa best single-clock change=+0.000000 mHa  coordinatewise minimum
+k= 9 r=4 stop=(4, 0, 3) optimum=(3, 4, 2) excess=0.108264 mHa best single-clock change=-0.000000 mHa  coordinatewise minimum
+k=10 r=4 stop=(4, 0, 3) optimum=(3, 4, 2) excess=0.159094 mHa best single-clock change=+0.000000 mHa  coordinatewise minimum
+k=11 r=4 stop=(4, 0, 3) optimum=(3, 4, 2) excess=0.159094 mHa best single-clock change=+0.000000 mHa  coordinatewise minimum
+k=12 r=4 stop=(4, 0, 3) optimum=(3, 4, 2) excess=0.157233 mHa best single-clock change=+0.000000 mHa  coordinatewise minimum
+9 misses; all coordinatewise minima: True

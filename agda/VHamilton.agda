@@ -1,7 +1,7 @@
 ------------------------------------------------------------------------
 -- VHamilton: open clocks over Hamilton, with a symbolic Hamiltonian
--- semantics in the Pauli basis, and a machine-checked equivalence of
--- two variational programs for every valuation and every clock subscript k.
+-- semantics in the Pauli basis, and machine-checked equivalences of
+-- variational programs for every valuation and every clock subscript k.
 --
 -- Checked with Agda 2.6.3 and agda-stdlib 1.7.3:
 --   agda -i . -i /usr/share/agda-stdlib VHamilton.agda
@@ -258,3 +258,46 @@ ZZ-equiv = sound {p = ZZ} {q = CX-IZ-CX} ZZ≃CX-IZ-CX
 -- Sanity check: the coefficient of Z⊗Z is exactly the symbol γ (1·γ).
 ZZ-coef : coef ⟦ ZZ ⟧ (Z ∷ Z ∷ []) ≡ unit γ (+ 1 / 1)
 ZZ-coef = refl
+
+------------------------------------------------------------------------
+-- Example: fusing the two controlled blocks of the chemistry ansatz.
+-- Two clocks α₂, α₃ (both with subscript r).  CY(α₂) turns the second
+-- qubit about Y on the |0⟩ branch of the first, CY̅(α₃) on the |1⟩
+-- branch; Mux(α₂,α₃) does both in one action.
+α₂ α₃ : Fin 2
+α₂ = zero
+α₃ = suc zero
+
+SH₂ : Cliff 2
+SH₂ = I₁ ⊗ (S · H)
+
+CY CY̅ Mux : Proc 2 2
+CY  = act (conj SH₂ (bare ((leaf (δ^ α₂) ⊕ leaf (-δ^ α₂)) ⊕ (leaf zer ⊕ leaf zer))))
+CY̅  = act (conj SH₂ (bare ((leaf zer ⊕ leaf zer) ⊕ (leaf (δ^ α₃) ⊕ leaf (-δ^ α₃)))))
+Mux = act (conj SH₂ (bare ((leaf (δ^ α₂) ⊕ leaf (-δ^ α₂)) ⊕ (leaf (δ^ α₃) ⊕ leaf (-δ^ α₃)))))
+
+-- Conjugation moves the second Pauli, so here both Paulis are split:
+-- one refl clause per Pauli string, 16 in all.
+Mux≃CY∥CY̅ : Mux ≃ (CY ∥ CY̅)
+Mux≃CY∥CY̅ (𝟙 ∷ 𝟙 ∷ []) = refl
+Mux≃CY∥CY̅ (𝟙 ∷ X ∷ []) = refl
+Mux≃CY∥CY̅ (𝟙 ∷ Y ∷ []) = refl
+Mux≃CY∥CY̅ (𝟙 ∷ Z ∷ []) = refl
+Mux≃CY∥CY̅ (X ∷ 𝟙 ∷ []) = refl
+Mux≃CY∥CY̅ (X ∷ X ∷ []) = refl
+Mux≃CY∥CY̅ (X ∷ Y ∷ []) = refl
+Mux≃CY∥CY̅ (X ∷ Z ∷ []) = refl
+Mux≃CY∥CY̅ (Y ∷ 𝟙 ∷ []) = refl
+Mux≃CY∥CY̅ (Y ∷ X ∷ []) = refl
+Mux≃CY∥CY̅ (Y ∷ Y ∷ []) = refl
+Mux≃CY∥CY̅ (Y ∷ Z ∷ []) = refl
+Mux≃CY∥CY̅ (Z ∷ 𝟙 ∷ []) = refl
+Mux≃CY∥CY̅ (Z ∷ X ∷ []) = refl
+Mux≃CY∥CY̅ (Z ∷ Y ∷ []) = refl
+Mux≃CY∥CY̅ (Z ∷ Z ∷ []) = refl
+
+-- The fused block in the Pauli basis: (α₂+α₃)/2 on I⊗Y, (α₂−α₃)/2 on Z⊗Y.
+Mux-IY : coef ⟦ Mux ⟧ (𝟙 ∷ Y ∷ []) ≡ half (unit α₂ (+ 1 / 1) ⊞ unit α₃ (+ 1 / 1))
+Mux-IY = refl
+Mux-ZY : coef ⟦ Mux ⟧ (Z ∷ Y ∷ []) ≡ half (unit α₂ (+ 1 / 1) ⊞ unit α₃ (-ℚ (+ 1 / 1)))
+Mux-ZY = refl

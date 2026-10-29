@@ -1,0 +1,1 @@
+python -m scripts.experiments.check_coordinate_minima --matrix results/hamilton_vqe/11_analytic_direct_global_validation/direct_validation_matrix.csv

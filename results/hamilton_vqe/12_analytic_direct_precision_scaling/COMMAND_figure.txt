@@ -1,0 +1,1 @@
+python -m scripts.experiments.direct_scaling_figure --csv results/hamilton_vqe/12_analytic_direct_precision_scaling/direct_scaling_results.csv --out results/hamilton_vqe/12_analytic_direct_precision_scaling/direct_scaling.tex

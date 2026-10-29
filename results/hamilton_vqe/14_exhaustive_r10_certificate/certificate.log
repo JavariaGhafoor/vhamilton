@@ -1,0 +1,11 @@
+k=14 r=10 grid=134,217,728 valuations
+  q=(223, 238, 155)  E=-0.23368392647153 (scaled)  E-E0(H_k)=0.000119007 mHa
+  q=(223, 239, 155)  E=-0.23368295668440 (scaled)  E-E0(H_k)=0.000169484 mHa
+  q=(223, 237, 155)  E=-0.23368189284836 (scaled)  E-E0(H_k)=0.000224856 mHa
+  margin best -> runner-up = 5.048e-05 mHa = 9.698e-07 scaled
+  higher precision (scaled):
+    q=(223, 238, 155)  double=-0.23368392647152772  long double=-0.23368392647152775  mpmath50=-0.23368392647152775761  |double-mpmath|=3.8e-17
+    q=(223, 239, 155)  double=-0.23368295668440187  long double=-0.23368295668440192  mpmath50=-0.23368295668440191934  |double-mpmath|=5.4e-17
+    q=(223, 237, 155)  double=-0.23368189284835503  long double=-0.23368189284835508  mpmath50=-0.23368189284835507496  |double-mpmath|=4.8e-17
+  margin at 50 digits = 9.69787125838e-7 scaled
+  sample of 200,000 valuations (seed 0): max |double - long double| = 7.3e-16 scaled

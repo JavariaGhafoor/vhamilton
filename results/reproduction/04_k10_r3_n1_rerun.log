@@ -1,0 +1,60 @@
+Discrete chemistry VQE: DMANH+ upper 4x4 block
+
+Hamiltonian dyadic precision k = 10
+parameter dyadic precision r   = 3
+Trotter refinement n           = 1
+search mode                    = full exhaustive grid
+target-grid candidates         = 64
+q-domain per parameter         = [0,1,2,3]
+
+Ansatz generators:
+  G1 = YI
+  G2 = (IY + ZY)/2 = |0><0| x Y
+  G3 = (IY - ZY)/2 = |1><1| x Y
+  alpha_j = q_j / 2^r
+
+VQE progress: 1/64 (  1.6%)  current q=[0,0,0]  E=0.723632812500  best q=[0,0,0]  best E=0.723632812500VQE progress: 2/64 (  3.1%)  current q=[0,0,1]  E=0.723632812500  best q=[0,0,0]  best E=0.723632812500VQE progress: 3/64 (  4.7%)  current q=[0,0,2]  E=0.723632812500  best q=[0,0,2]  best E=0.723632812500VQE progress: 4/64 (  6.2%)  current q=[0,0,3]  E=0.723632812500  best q=[0,0,2]  best E=0.723632812500VQE progress: 5/64 (  7.8%)  current q=[0,1,0]  E=0.286132812500  best q=[0,1,0]  best E=0.286132812500VQE progress: 6/64 (  9.4%)  current q=[0,1,1]  E=0.286132812500  best q=[0,1,1]  best E=0.286132812500VQE progress: 7/64 ( 10.9%)  current q=[0,1,2]  E=0.286132812500  best q=[0,1,1]  best E=0.286132812500VQE progress: 8/64 ( 12.5%)  current q=[0,1,3]  E=0.286132812500  best q=[0,1,1]  best E=0.286132812500VQE progress: 9/64 ( 14.1%)  current q=[0,2,0]  E=0.137695312500  best q=[0,2,0]  best E=0.137695312500VQE progress: 10/64 ( 15.6%)  current q=[0,2,1]  E=0.137695312500  best q=[0,2,0]  best E=0.137695312500VQE progress: 11/64 ( 17.2%)  current q=[0,2,2]  E=0.137695312500  best q=[0,2,0]  best E=0.137695312500VQE progress: 12/64 ( 18.8%)  current q=[0,2,3]  E=0.137695312500  best q=[0,2,0]  best E=0.137695312500VQE progress: 13/64 ( 20.3%)  current q=[0,3,0]  E=0.575195312500  best q=[0,2,0]  best E=0.137695312500VQE progress: 14/64 ( 21.9%)  current q=[0,3,1]  E=0.575195312500  best q=[0,2,0]  best E=0.137695312500VQE progress: 15/64 ( 23.4%)  current q=[0,3,2]  E=0.575195312500  best q=[0,2,0]  best E=0.137695312500VQE progress: 16/64 ( 25.0%)  current q=[0,3,3]  E=0.575195312500  best q=[0,2,0]  best E=0.137695312500VQE progress: 17/64 ( 26.6%)  current q=[1,0,0]  E=0.377929687500  best q=[0,2,0]  best E=0.137695312500VQE progress: 18/64 ( 28.1%)  current q=[1,0,1]  E=0.270409663024  best q=[0,2,0]  best E=0.137695312500VQE progress: 19/64 ( 29.7%)  current q=[1,0,2]  E=0.290039062500  best q=[0,2,0]  best E=0.137695312500VQE progress: 20/64 ( 31.2%)  current q=[1,0,3]  E=0.383887211976  best q=[0,2,0]  best E=0.137695312500VQE progress: 21/64 ( 32.8%)  current q=[1,1,0]  E=0.050214125192  best q=[1,1,0]  best E=0.050214125192VQE progress: 22/64 ( 34.4%)  current q=[1,1,1]  E=-0.017578125000  best q=[1,1,1]  best E=-0.017578125000VQE progress: 23/64 ( 35.9%)  current q=[1,1,2]  E=0.082337605956  best q=[1,1,1]  best E=-0.017578125000VQE progress: 24/64 ( 37.5%)  current q=[1,1,3]  E=0.250000000000  best q=[1,1,1]  best E=-0.017578125000VQE progress: 25/64 ( 39.1%)  current q=[1,2,0]  E=-0.077148437500  best q=[1,2,0]  best E=-0.077148437500VQE progress: 26/64 ( 40.6%)  current q=[1,2,1]  E=-0.126139181876  best q=[1,2,1]  best E=-0.126139181876VQE progress: 27/64 ( 42.2%)  current q=[1,2,2]  E=0.012695312500  best q=[1,2,1]  best E=-0.126139181876VQE progress: 28/64 ( 43.8%)  current q=[1,2,3]  E=0.216595643788  best q=[1,2,1]  best E=-0.126139181876VQE progress: 29/64 ( 45.3%)  current q=[1,3,0]  E=0.175410424144  best q=[1,2,1]  best E=-0.126139181876VQE progress: 30/64 ( 46.9%)  current q=[1,3,1]  E=0.113281250000  best q=[1,2,1]  best E=-0.126139181876VQE progress: 31/64 ( 48.4%)  current q=[1,3,2]  E=0.226868855956  best q=[1,2,1]  best E=-0.126139181876VQE progress: 32/64 ( 50.0%)  current q=[1,3,3]  E=0.408203125000  best q=[1,2,1]  best E=-0.126139181876VQE progress: 33/64 ( 51.6%)  current q=[2,0,0]  E=0.004882812500  best q=[1,2,1]  best E=-0.126139181876VQE progress: 34/64 ( 53.1%)  current q=[2,0,1]  E=-0.202148437500  best q=[2,0,1]  best E=-0.202148437500VQE progress: 35/64 ( 54.7%)  current q=[2,0,2]  E=-0.143554687500  best q=[2,0,1]  best E=-0.202148437500VQE progress: 36/64 ( 56.2%)  current q=[2,0,3]  E=0.063476562500  best q=[2,0,1]  best E=-0.202148437500VQE progress: 37/64 ( 57.8%)  current q=[2,1,0]  E=0.004882812500  best q=[2,0,1]  best E=-0.202148437500VQE progress: 38/64 ( 59.4%)  current q=[2,1,1]  E=-0.202148437500  best q=[2,0,1]  best E=-0.202148437500VQE progress: 39/64 ( 60.9%)  current q=[2,1,2]  E=-0.143554687500  best q=[2,0,1]  best E=-0.202148437500VQE progress: 40/64 ( 62.5%)  current q=[2,1,3]  E=0.063476562500  best q=[2,0,1]  best E=-0.202148437500VQE progress: 41/64 ( 64.1%)  current q=[2,2,0]  E=0.004882812500  best q=[2,0,1]  best E=-0.202148437500VQE progress: 42/64 ( 65.6%)  current q=[2,2,1]  E=-0.202148437500  best q=[2,2,1]  best E=-0.202148437500VQE progress: 43/64 ( 67.2%)  current q=[2,2,2]  E=-0.143554687500  best q=[2,2,1]  best E=-0.202148437500VQE progress: 44/64 ( 68.8%)  current q=[2,2,3]  E=0.063476562500  best q=[2,2,1]  best E=-0.202148437500VQE progress: 45/64 ( 70.3%)  current q=[2,3,0]  E=0.004882812500  best q=[2,2,1]  best E=-0.202148437500VQE progress: 46/64 ( 71.9%)  current q=[2,3,1]  E=-0.202148437500  best q=[2,2,1]  best E=-0.202148437500VQE progress: 47/64 ( 73.4%)  current q=[2,3,2]  E=-0.143554687500  best q=[2,2,1]  best E=-0.202148437500VQE progress: 48/64 ( 75.0%)  current q=[2,3,3]  E=0.063476562500  best q=[2,2,1]  best E=-0.202148437500VQE progress: 49/64 ( 76.6%)  current q=[3,0,0]  E=0.350585937500  best q=[2,2,1]  best E=-0.202148437500VQE progress: 50/64 ( 78.1%)  current q=[3,0,1]  E=0.251074711976  best q=[2,2,1]  best E=-0.202148437500VQE progress: 51/64 ( 79.7%)  current q=[3,0,2]  E=0.290039062500  best q=[2,2,1]  best E=-0.202148437500VQE progress: 52/64 ( 81.2%)  current q=[3,0,3]  E=0.403222163024  best q=[2,2,1]  best E=-0.202148437500VQE progress: 53/64 ( 82.8%)  current q=[3,1,0]  E=0.240801499808  best q=[2,2,1]  best E=-0.202148437500VQE progress: 54/64 ( 84.4%)  current q=[3,1,1]  E=0.101562500000  best q=[2,2,1]  best E=-0.202148437500VQE progress: 55/64 ( 85.9%)  current q=[3,1,2]  E=0.060240519044  best q=[2,2,1]  best E=-0.202148437500VQE progress: 56/64 ( 87.5%)  current q=[3,1,3]  E=0.099609375000  best q=[2,2,1]  best E=-0.202148437500VQE progress: 57/64 ( 89.1%)  current q=[3,2,0]  E=0.219726562500  best q=[2,2,1]  best E=-0.202148437500VQE progress: 58/64 ( 90.6%)  current q=[3,2,1]  E=0.061686056876  best q=[2,2,1]  best E=-0.202148437500VQE progress: 59/64 ( 92.2%)  current q=[3,2,2]  E=-0.018554687500  best q=[2,2,1]  best E=-0.202148437500VQE progress: 60/64 ( 93.8%)  current q=[3,2,3]  E=-0.015423768788  best q=[2,2,1]  best E=-0.202148437500VQE progress: 61/64 ( 95.3%)  current q=[3,3,0]  E=0.404667700856  best q=[2,2,1]  best E=-0.202148437500VQE progress: 62/64 ( 96.9%)  current q=[3,3,1]  E=0.259765625000  best q=[2,2,1]  best E=-0.202148437500VQE progress: 63/64 ( 98.4%)  current q=[3,3,2]  E=0.204771769044  best q=[2,2,1]  best E=-0.202148437500VQE progress: 64/64 (100.0%)  current q=[3,3,3]  E=0.230468750000  best q=[2,2,1]  best E=-0.202148437500
+Best discrete VQE result
+  best q                     = [2,2,1]
+  full VQE energy (scaled)   = -0.202148437500
+  exact ground of dyadic H_k (scaled) = -0.234070730182
+  nonidentity VQE component  = -0.382812500000
+  nonidentity ground comp.   = -0.414734792682
+  variational gap (scaled)   = 3.192229268194e-2
+
+Search cost
+  energy evaluations used    = 64
+  exhaustive target grid     = 64
+  evaluation reduction       = 1.0x
+
+Identity/physical-energy reconstruction
+  scale                      = 0.019212480427
+  exact identity coeff (mH) = 9.418625000000
+  scaled identity (exact)    = 0.180955148464
+  scaled identity (dyadic)   = 0.180664062500
+
+Physical energies (milliHartree)
+  VQE estimate               = -10.521725097656
+  exact ground of dyadic H_k = -12.183264470605
+  exact ground of physical H = -12.162810425974
+  variational gap            = 1.661539372948
+  H discretization shift     = -0.020454044631
+  total signed VQE error     = +1.641085328318
+
+Notes:
+  * The VQE target includes the dyadic identity term; ansatz circuits do not need it.
+  * Refine, coordinate, analytic, and analytic-direct modes all return parameters on the requested dyadic grid.
+  * Coordinate mode tests axial +/-1 moves first, reducing the local 3^p factor to roughly 2p per round.
+  * Analytic mode fits the exact low-degree one-coordinate trigonometric energy curves for this ansatz and jumps directly to target r.
+  * Analytic mode has energy-query complexity approximately O(2^(p*r0) + B*p*L).
+  * Analytic-direct removes the coarse search by using q_j=2^(r-3), the deterministic beta_j=pi/4 balanced seed.
+  * For fixed harmonic degree its energy-query complexity is approximately O(p*L), independent of target precision r.
+  * The balanced-start construction is polynomial; global convergence of the nonconvex VQE search is still heuristic.
+  * All non-exhaustive search modes remain heuristic as global multi-parameter optimizers.
+  * Use 'exhaustive' mode at feasible r to validate the refinement result.
+  * G2 and G3 contain commuting Pauli terms, so n=0 has no Trotter error here.
+  * This run is exact-statevector/noiseless; there is no shot noise yet.
+
+real	7m30.085s
+user	6m32.487s
+sys	0m40.945s

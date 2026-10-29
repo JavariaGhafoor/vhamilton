@@ -1,0 +1,33 @@
+k= 3 delta_H=-5.437696 bound=32.5309
+k= 4 delta_H=+0.854324 bound=16.2655
+k= 5 delta_H=+0.282851 bound=8.1327
+k= 6 delta_H=-0.195433 bound=4.0664
+k= 7 delta_H=-0.239021 bound=2.0332
+k= 8 delta_H=-0.070544 bound=1.0166
+k= 9 delta_H=+0.062785 bound=0.5083
+k=10 delta_H=-0.020454 bound=0.2541
+k=11 delta_H=+0.007058 bound=0.1271
+k=12 delta_H=+0.006010 bound=0.0635
+k=13 delta_H=-0.003298 bound=0.0318
+k=14 delta_H=-0.000440 bound=0.0159
+k= 6 r=2 delta_r=5.03878 first=188.8 second=444.8
+k= 6 r=3 delta_r=1.78569 first=94.38 second=111.2
+k= 6 r=4 delta_r=0.746183 first=47.19 second=27.8
+k= 6 r=5 delta_r=0.0354079 first=23.6 second=6.95
+k= 6 r=6 delta_r=0.0163879 first=11.8 second=1.737
+k= 6 r=7 delta_r=0.0132175 first=5.899 second=0.4343
+k= 6 r=8 delta_r=0.00346772 first=2.949 second=0.1086
+k=10 r=2 delta_r=4.71131 first=186.6 second=439.5
+k=10 r=3 delta_r=1.66154 first=93.28 second=109.9
+k=10 r=4 delta_r=0.795577 first=46.64 second=27.47
+k=10 r=5 delta_r=0.0257599 first=23.32 second=6.868
+k=10 r=6 delta_r=0.0118313 first=11.66 second=1.717
+k=10 r=7 delta_r=0.00958314 first=5.83 second=0.4292
+k=10 r=8 delta_r=0.00122822 first=2.915 second=0.1073
+k=14 r=2 delta_r=4.70401 first=186.7 second=439.9
+k=14 r=3 delta_r=1.66059 first=93.34 second=110
+k=14 r=4 delta_r=0.793694 first=46.67 second=27.49
+k=14 r=5 delta_r=0.0258364 first=23.34 second=6.873
+k=14 r=6 delta_r=0.0119218 first=11.67 second=1.718
+k=14 r=7 delta_r=0.00940462 first=5.834 second=0.4296
+k=14 r=8 delta_r=0.00118717 first=2.917 second=0.1074
