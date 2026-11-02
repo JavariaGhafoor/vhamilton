@@ -1,11 +1,11 @@
-# From Hamilton to VHamilton: noiseless VQE
+# From Hamilton to VHamilton: VQE
 
 This repository starts with **Hamilton**, a compositional language for constructing
 Hamiltonians and compiling their associated time-evolution operators into quantum
 circuits. It then makes one **minimal syntactic extension**, called **VHamilton**,
 so that a single program can describe a *family* of Hamiltonians indexed by
 variational parameters. That family supplies the parameterized time-evolution
-blocks used in the noiseless variational quantum eigensolver (VQE) experiments.
+blocks used in the variational quantum eigensolver (VQE) experiments.
 
 The language, its semantics and the experiments are described here:<br>
 [*Variational Programs with Open Clocks*](https://doi.org/10.48550/arXiv.2610.40988)

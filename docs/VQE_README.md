@@ -26,7 +26,7 @@ three-parameter DMANH+ ansatz, in the minimal syntax. All existing optimizer
 modes (`refine`, `coordinate`, `analytic`, `analytic-direct`, `exhaustive`)
 evaluate these same processes, with new valuations for each candidate.
 
-The exact/noiseless energy oracle in `scripts/vqe/vqe_eval.py` uses the target
+The exact energy oracle in `scripts/vqe/vqe_eval.py` uses the target
 Hamiltonian matrix and the circuit's statevector, as before. The outer
 experiment drivers use the same Haskell executables, so they now use the
 updated syntax automatically.

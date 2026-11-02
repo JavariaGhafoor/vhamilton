@@ -1,6 +1,6 @@
 # Chemistry VQE precision sweep
 
-`scripts/experiments/chem_vqe_sweep.py` performs the systematic noiseless experiment over the two
+`scripts/experiments/chem_vqe_sweep.py` performs the systematic experiment over the two
 finite precision knobs currently present in the chemistry VQE:
 
 - `k`: dyadic precision of the Hamiltonian coefficients,
