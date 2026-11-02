@@ -7,6 +7,10 @@ so that a single program can describe a *family* of Hamiltonians indexed by
 variational parameters. That family supplies the parameterized time-evolution
 blocks used in the noiseless variational quantum eigensolver (VQE) experiments.
 
+The language, its semantics and the experiments are described here:<br>
+[*Variational Programs with Open Clocks*](https://doi.org/10.48550/arXiv.2610.40988)
+(Javaria Ghafoor and Amr Sabry, arXiv:2610.40988)
+
 **What changes in the language?** Only the set of **bare actions**: VHamilton
 adds `δ_k^{α_j}` and `-δ_k^{α_j}`. It does **not** introduce scalar
 multiplication, arbitrary arithmetic expressions, or any new process operator.
