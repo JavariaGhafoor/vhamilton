@@ -1,6 +1,0 @@
-Z_0: unit-time evolution = I up to phase: True; exactly: True
-Z_1: unit-time evolution = -I up to phase: True; exactly: True
-Z_2: unit-time evolution = Z up to phase: True
-Z_3: unit-time evolution = S up to phase: True
-Z_4: unit-time evolution = T up to phase: True
-ZZ_3: e^{-i pi ZZ/4} == e^{-i pi/4} (S x S) CZ: True
